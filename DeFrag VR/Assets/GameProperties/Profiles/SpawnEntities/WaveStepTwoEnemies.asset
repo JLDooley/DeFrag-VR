@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c68394b70979a44afede1304797581, type: 3}
+  m_Name: WaveStepTwoEnemies
+  m_EditorClassIdentifier: 
+  Description: 'Increases Wave Step by one when two
+
+    enemies are left in Active
+    Enemies Set'
+  prefab: {fileID: 447884448608267562, guid: f2c0735b3e386494eb52f236fbb2735c, type: 3}

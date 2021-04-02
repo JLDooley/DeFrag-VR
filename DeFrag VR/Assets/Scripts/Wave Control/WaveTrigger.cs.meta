@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 31d8f74c6dfa56d41bb3c9270527a62d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - RuntimeSet: {fileID: 11400000, guid: bb7c7514516af904d973609606d32038, type: 2}
+  - TriggerWaveEvent: {fileID: 11400000, guid: 4a966cd456aea724d857e106bd1598d7, type: 2}
+  - stageIndex: {fileID: 11400000, guid: a58ee1443fd97eb4a8bf0e17faee00fa, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

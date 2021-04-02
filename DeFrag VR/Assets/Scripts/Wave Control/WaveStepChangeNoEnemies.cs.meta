@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f823b6689e1e3c74c8620e84b5075020
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - waveStepReference: {fileID: 11400000, guid: 843ff7856862f364d8f089a7b4270883,
+      type: 2}
+  - activeEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

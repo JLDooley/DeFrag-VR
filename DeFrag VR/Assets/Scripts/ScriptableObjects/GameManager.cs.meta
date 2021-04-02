@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8325d3bf54f55c7408ab179f91c79fa3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _ActiveEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29,
+      type: 2}
+  - playerTransform: {fileID: 11400000, guid: e476e2692523aa74bae5a32877bc66b2, type: 2}
+  - defaultFadeProfile: {fileID: 11400000, guid: 0d37c9cfa209b1a4ba474035ec24dda2,
+      type: 2}
+  - currentFadeProfile: {instanceID: 0}
+  - MaxHealth: {fileID: 11400000, guid: 92262b4afe6027d46b17411ffac609da, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
