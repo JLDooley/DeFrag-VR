@@ -27,25 +27,23 @@ namespace Game
         }
         #endregion
 
-        private Queue<SpawnProfileBase> spawnQueue = new Queue<SpawnProfileBase>();
+        //private Queue<SpawnProfileBase> spawnQueue = new Queue<SpawnProfileBase>();
 
         private GameObject spawnActiveEnemy;
 
-        private ActiveEnemiesSet activeEnemiesSet;
+        //private ActiveEnemiesSet activeEnemiesSet;
 
         [SerializeField]
         private IntReference currentStep;
 
-        private float timeToNextSpawn;
-
-        [SerializeField]
-        private int spawnCounter = 0;
+        //[SerializeField]
+        //private int spawnCounter = 0;
 
         private bool spawnListFinished = false;
 
         private void OnEnable()
         {
-            activeEnemiesSet = gameManager.ActiveEnemiesSet;
+            //activeEnemiesSet = gameManager.ActiveEnemiesSet;
         }
 
         public void Raise()
@@ -54,7 +52,7 @@ namespace Game
 
             spawnListFinished = false;
 
-            spawnCounter = 0;
+            //spawnCounter = 0;
             StartCoroutine(StartSpawner());
             StartCoroutine(SlowUpdate());
         }
@@ -66,21 +64,34 @@ namespace Game
             //Check if no active enemy uses this spawner
             //Check if SpawnInstance.step <= GameManager.step
             //Spawn when free
+            #region Old Code
+            //for (int i = 0; i < spawnList.Length; i++)
+            //{
+            //    //Wait for steps to catch up
+            //    yield return new WaitWhile(() => spawnList[i].step > currentStep);
+
+            //    spawnQueue.Enqueue(spawnList[i].prefab);
+
+            //    Debug.Log(spawnList[i].prefab + " added to spawn queue.");
+            //}
+            //yield return new WaitWhile(() => spawnQueue.Count > 0); //Wait until the spawn queue is empty
+
+            //spawnListFinished = true;
+
+            //FinishSpawner();
+            #endregion
 
             for (int i = 0; i < spawnList.Length; i++)
             {
-                //Wait for steps to catch up
+                yield return new WaitWhile(() => spawnActiveEnemy != null);
+
                 yield return new WaitWhile(() => spawnList[i].step > currentStep);
 
-                spawnQueue.Enqueue(spawnList[i].prefab);
+                yield return new WaitForSeconds(spawnList[i].spawnDelay);
 
-                Debug.Log(spawnList[i].prefab + " added to spawn queue.");
+                Spawn(spawnList[i].prefab);
             }
-            yield return new WaitWhile(() => spawnQueue.Count > 0); //Wait until the spawn queue is empty
-
             spawnListFinished = true;
-
-            //FinishSpawner();
         }
 
         /// <summary>
@@ -92,44 +103,54 @@ namespace Game
             float slowUpdateFrequency = gameManager.SlowUpdateFrequency;
             Debug.Log(slowUpdateFrequency);
 
-            while (SpawnerActive || spawnQueue.Count > 0)
+            #region Old Code
+            //while (SpawnerActive || spawnQueue.Count > 0)
+            //{
+            //    if (spawnListFinished && spawnQueue.Count == 0)
+            //    {
+            //        FinishSpawner();
+            //    }
+
+            //    if (spawnActiveEnemy == null || !activeEnemiesSet.Items.Contains(spawnActiveEnemy))
+            //    {
+            //        if (spawnList[spawnCounter].spawnDelay > 0)
+            //        {
+            //            yield return new WaitForSeconds(spawnList[spawnCounter].spawnDelay);
+            //        }
+
+            //        spawnCounter++;
+            //        Debug.Log(gameObject.name + " Spawn Counter: " + spawnCounter);
+            //        Debug.Log(Time.time);
+
+            //        Spawn();
+            //    }
+
+            //    #region Fail Safe
+            //    //Stop the game hanging if queue not populating but all enemies are defeated.
+            //    //if (spawnQueue.Count == 0)
+            //    //{
+            //    //    if (activeEnemiesSet.Items.Count == 0)
+            //    //    {
+            //    //        throwErrorDelay = throwErrorDelay + slowUpdateFrequency;
+            //    //        if (throwErrorDelay >= Mathf.Max(10f, timeToNextSpawn))
+            //    //        {
+            //    //            FinishSpawner();
+            //    //            throw new UnityException("Current wave not resolving, check spawners to ensure spawn conditions are being met.");
+            //    //        }
+            //    //    }
+            //    //}
+            //    #endregion
+
+            //    yield return new WaitForSeconds(slowUpdateFrequency);
+            //}
+            #endregion
+
+            while (SpawnerActive)
             {
-                if (spawnListFinished && spawnQueue.Count == 0)
+                if (spawnListFinished)
                 {
                     FinishSpawner();
                 }
-
-                if (spawnActiveEnemy == null || !activeEnemiesSet.Items.Contains(spawnActiveEnemy))
-                {
-                    if (spawnList[spawnCounter].spawnDelay > 0)
-                    {
-                        yield return new WaitForSeconds(spawnList[spawnCounter].spawnDelay);
-                    }
-
-                    spawnCounter++;
-                    Debug.Log(gameObject.name + " Spawn Counter: " + spawnCounter);
-                    Debug.Log(Time.time);
-
-                    //StartCoroutine(Spawn());
-                    Spawn();
-                }
-
-                #region Fail Safe
-                //Stop the game hanging if queue not populating but all enemies are defeated.
-                //if (spawnQueue.Count == 0)
-                //{
-                //    if (activeEnemiesSet.Items.Count == 0)
-                //    {
-                //        throwErrorDelay = throwErrorDelay + slowUpdateFrequency;
-                //        if (throwErrorDelay >= Mathf.Max(10f, timeToNextSpawn))
-                //        {
-                //            FinishSpawner();
-                //            throw new UnityException("Current wave not resolving, check spawners to ensure spawn conditions are being met.");
-                //        }
-                //    }
-                //}
-                #endregion
-
                 yield return new WaitForSeconds(slowUpdateFrequency);
             }
         }
@@ -138,29 +159,40 @@ namespace Game
         /// <summary>
         /// 
         /// </summary>
-        private void Spawn()
+        private void Spawn(SpawnProfileBase spawnProfile)
         {
-            // There is no active enemy associated with this spawner
-            if (spawnActiveEnemy == null || !activeEnemiesSet.Items.Contains(spawnActiveEnemy))
+            #region Old Code
+            //// There is no active enemy associated with this spawner
+            //if (spawnActiveEnemy == null || !activeEnemiesSet.Items.Contains(spawnActiveEnemy))
+            //{
+
+
+            //    if (spawnQueue.Count > 0)   //Avoids a 'ThrowForEmptyQueue' error
+            //    {
+
+            //        //Spawn first item on the list
+            //        spawnActiveEnemy = Instantiate(spawnQueue.Peek().prefab, transform.position, transform.rotation);
+
+            //        //Remove from the list
+            //        spawnQueue.Dequeue();
+
+            //        //Assign path
+            //        Movement prefabMovementClass = spawnActiveEnemy.GetComponentInChildren<Movement>();
+            //        if (prefabMovementClass != null)
+            //        {
+            //            prefabMovementClass.path = path;
+            //        }
+            //    }
+            //}
+            #endregion
+            //Debug.Log("Spawner: " + gameObject.name + "; Spawning: " + spawnProfile.prefab);
+            spawnActiveEnemy = Instantiate(spawnProfile.prefab, transform.position, transform.rotation);
+
+            //Assign path
+            Movement prefabMovementClass = spawnActiveEnemy.GetComponentInChildren<Movement>();
+            if (prefabMovementClass != null)
             {
-
-
-                if (spawnQueue.Count > 0)   //Avoids a 'ThrowForEmptyQueue' error
-                {
-
-                    //Spawn first item on the list
-                    spawnActiveEnemy = Instantiate(spawnQueue.Peek().prefab, transform.position, transform.rotation);
-
-                    //Remove from the list
-                    spawnQueue.Dequeue();
-
-                    //Assign path
-                    Movement prefabMovementClass = spawnActiveEnemy.GetComponentInChildren<Movement>();
-                    if (prefabMovementClass != null)
-                    {
-                        prefabMovementClass.path = path;
-                    }
-                }
+                prefabMovementClass.path = path;
             }
         }
 

@@ -4,6 +4,9 @@ using Game.Data;
 
 namespace Game.Utility
 {
+    /// <summary>
+    /// Starts a timer when the number of remaining enemies drops below a threshold. Increments step when timer expires.
+    /// </summary>
     public class WaveStepChangeNoEnemies : MonoBehaviour
     {
         [SerializeField]
@@ -26,12 +29,14 @@ namespace Game.Utility
                 Destroy(gameObject);
             }
 
+            //Start timer when below threshold.
             if (activeEnemiesSet.Items.Count <= enemiesLeft)
             {
                 updateStepDelay += Time.deltaTime;
             }
             else
             {
+                //Reset timer when above threshold.
                 updateStepDelay = 0f;
             }
 
