@@ -41,6 +41,8 @@ namespace Game
         [SerializeField]
         private int spawnCounter = 0;
 
+        private bool spawnListFinished = false;
+
         private void OnEnable()
         {
             activeEnemiesSet = gameManager.ActiveEnemiesSet;
@@ -49,6 +51,9 @@ namespace Game
         public void Raise()
         {
             _SpawnerActive = true;
+
+            spawnListFinished = false;
+
             spawnCounter = 0;
             StartCoroutine(StartSpawner());
             StartCoroutine(SlowUpdate());
@@ -72,7 +77,10 @@ namespace Game
                 Debug.Log(spawnList[i].prefab + " added to spawn queue.");
             }
             yield return new WaitWhile(() => spawnQueue.Count > 0); //Wait until the spawn queue is empty
-            FinishSpawner();
+
+            spawnListFinished = true;
+
+            //FinishSpawner();
         }
 
         /// <summary>
@@ -82,19 +90,30 @@ namespace Game
         private IEnumerator SlowUpdate()
         {
             float slowUpdateFrequency = gameManager.SlowUpdateFrequency;
-            //float throwErrorDelay = 0f;
+            Debug.Log(slowUpdateFrequency);
 
             while (SpawnerActive || spawnQueue.Count > 0)
             {
+                if (spawnListFinished && spawnQueue.Count == 0)
+                {
+                    FinishSpawner();
+                }
+
                 if (spawnActiveEnemy == null || !activeEnemiesSet.Items.Contains(spawnActiveEnemy))
                 {
-                    Debug.LogWarning(spawnList.Length);
-                    yield return new WaitForSeconds(spawnList[spawnCounter].spawnDelay);
+                    if (spawnList[spawnCounter].spawnDelay > 0)
+                    {
+                        yield return new WaitForSeconds(spawnList[spawnCounter].spawnDelay);
+                    }
+
                     spawnCounter++;
+                    Debug.Log(gameObject.name + " Spawn Counter: " + spawnCounter);
+                    Debug.Log(Time.time);
 
                     //StartCoroutine(Spawn());
                     Spawn();
                 }
+
                 #region Fail Safe
                 //Stop the game hanging if queue not populating but all enemies are defeated.
                 //if (spawnQueue.Count == 0)
@@ -110,9 +129,11 @@ namespace Game
                 //    }
                 //}
                 #endregion
+
                 yield return new WaitForSeconds(slowUpdateFrequency);
             }
         }
+
 
         /// <summary>
         /// 
