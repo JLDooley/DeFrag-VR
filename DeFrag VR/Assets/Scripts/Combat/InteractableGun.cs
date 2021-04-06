@@ -68,6 +68,8 @@ namespace Game.Combat
                     }
                     else
                     {
+                        
+
                         //Debug.Log("Main Target Hit");
                         //Debug.Break();
 
@@ -81,7 +83,7 @@ namespace Game.Combat
                             //Debug.Log(target);
                             target.OnHit(weaponProfile);
                         }
-                        
+
                         SpawnTrail(impactPoint);
                     } 
                 }
@@ -115,9 +117,14 @@ namespace Game.Combat
             }
         }
 
-        private void DebugHitPoint(Vector3 position)
+        private void DebugHitPoint(Vector3 position, string name = "")
         {
-            Instantiate(new GameObject(), position, Quaternion.identity);
+            Instantiate(new GameObject(), position, Quaternion.identity).gameObject.name = name;
+        }
+
+        private void DebugHitPoint(Transform transform, string name = "")
+        {
+            Instantiate(new GameObject(), transform.position, transform.rotation).gameObject.name = name;
         }
     }
 

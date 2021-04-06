@@ -24,21 +24,28 @@ namespace Game.Utility
 
         public void SetDestinationAndMove()
         {
+            //Debug.Log("Preparing to move player.");
             if (targetDestination != null)
             {
+                //Debug.Log("Destination provided: " + targetDestination);
                 if (gameManager != null)
                 {
+                    //Debug.Log("GameManager present.");
                     if (fadeProfile != null)
                     {
+                        //Debug.Log("FadeProfile available.");
                         gameManager.currentFadeProfile = fadeProfile;
                     }
                     else
                     {
+                        //Debug.Log("Using default FadeProfile.");
                         gameManager.currentFadeProfile = gameManager.defaultFadeProfile;
                     }
                 }
                 
                 targetReference.SetTransformValue(targetDestination);
+                //Debug.Log(targetDestination.position);
+                //Debug.Log("Moving");
                 movePlayerEvent.Raise();
             }
             else

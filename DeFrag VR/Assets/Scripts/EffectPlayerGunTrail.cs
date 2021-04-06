@@ -31,7 +31,7 @@ namespace Game.Effects
 
         public override void Raise()
         {
-            CalculateTrail(transform.forward * maxDrawDistance);
+            CalculateTrail(transform.position + (transform.forward * maxDrawDistance));
         }
 
         public override void Raise(Vector3 vector3)
