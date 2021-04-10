@@ -219,8 +219,11 @@ namespace Game
 
                 //rb.velocity = (Vector3.Normalize(coordinateOnPath - transform.position)) * targetVelocity;
 
-
+                //Debug.Log("Pre-Move Transform Position: " + transform.position);
+                //Debug.Log("Pre-Move Rigidbody Position: " + rb.position);
                 rb.MovePosition(coordinateOnPath);
+                //Debug.Log("Post-Move Transform Position: " + transform.position);
+                //Debug.Log("Post-Move Rigidbody Position: " + rb.position);
 
                 //rb.AddForce((Vector3.Normalize(coordinateOnPath - transform.position)) * targetVelocity, ForceMode.VelocityChange);
 
