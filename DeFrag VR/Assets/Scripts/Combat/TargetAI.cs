@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Game.Data;
 using Game.Utility;
+using UnityEngine.Events;
 
 namespace Game.Combat
 {
@@ -41,8 +42,9 @@ namespace Game.Combat
             {
                 if (value != _CurrentHealth)
                 {
+                    UpdateHealth(value);
                     _CurrentHealth = value;
-                    HealthCheck();
+                    
                 }
             }
         }
@@ -107,6 +109,12 @@ namespace Game.Combat
         private ActiveEnemiesSet activeEnemiesSet;
         #endregion
 
+
+        #region Events
+        public UnityEvent onDamage;
+        public UnityEvent onHeal;
+        public UnityEvent onDefeat;
+        #endregion
         //private void OnEnable()
         //{
         //    Setup();
@@ -127,9 +135,28 @@ namespace Game.Combat
             SubscribeListeners();
         }
 
-        public override void HealthCheck()
+        public override void UpdateHealth(float newHealthValue)
         {
-            base.HealthCheck();
+            if (newHealthValue <= 0f)
+            {
+                Die();
+            }
+            else
+            {
+                if (_CurrentHealth > newHealthValue)
+                {
+                    Debug.Log("Target damaged.");
+                    onDamage.Invoke();
+                }
+                else
+                {
+                    Debug.Log("Target healed.");
+                    onHeal.Invoke();
+                }
+                _CurrentHealth = newHealthValue;
+            }
+
+
         }
 
         private void SubscribeListeners()
@@ -154,7 +181,7 @@ namespace Game.Combat
 
         public override void Die()
         {
-            base.Die();
+            onDefeat.Invoke();
 
             //Remove from Active Enemies Set
             activeEnemiesSet.Remove(parentEntity);

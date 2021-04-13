@@ -42,14 +42,20 @@ namespace Game.Combat
         }
 
         /// <summary>
+        /// Sets the Target's current health to the given value.
+        /// </summary>
+        /// <param name="health"></param>
+        public virtual void SetHealth(float health)
+        {
+            CurrentHealth = health;
+        }
+
+        /// <summary>
         /// How the target reacts to changes of health.
         /// </summary>
-        public virtual void HealthCheck()
+        public virtual void UpdateHealth(float newHealthValue)
         {
-            if (CurrentHealth <= 0)
-            {
-                Die();
-            }
+
         }
         
         /// <summary>
