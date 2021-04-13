@@ -27,14 +27,17 @@ namespace Game.Combat
             { 
                 if (value != _CurrentHealth.Value)
                 {
-                    _CurrentHealth.SetValue(value);
-                    HealthCheck();
+                    //Debug.LogWarning(value);
+                    UpdateHealth(value);
+                    //_CurrentHealth.SetValue(value);   //Will handle this in HealthCheck, so it can be determined if healing or hurting is taking place
+                    
                 }
             }
         }
         #endregion
 
-        public GameEvent onHit;
+        public GameEvent onDamage;
+        public GameEvent onHeal;
         public GameEvent onDefeat;
 
         public override void Setup()
@@ -42,19 +45,61 @@ namespace Game.Combat
             base.Setup();
 
             //set health
+            SetHealth(MaxHealth);
         }
 
-        public override void HealthCheck()
+
+        public override void SetHealth(float health)
         {
-            base.HealthCheck();
+            _CurrentHealth.SetValue(health);
+            CurrentHealth = _CurrentHealth.Value;
+        }
+
+        public override void UpdateHealth(float newHealthValue)
+        {
+            Debug.LogWarning("NewHealthValue" + newHealthValue);
+            Debug.LogWarning("_CurrentHealth: " + _CurrentHealth.Value);
+            Debug.LogWarning("CurrentHealth: " + CurrentHealth);
+
+            if (newHealthValue <= 0f)
+            {
+                Die();
+            }
+            else
+            {
+                if (_CurrentHealth.Value > newHealthValue)   //Player has been hurt
+                {
+                    Debug.Log("Player hurt.");
+                    if (onDamage != null)
+                    {
+                        onDamage.Raise();
+                    }
+                    
+                }
+                else
+                {
+                    Debug.Log("Player healed.");
+                    if (onHeal != null)
+                    {
+                        onHeal.Raise();
+                    }
+
+                }
+
+                _CurrentHealth.SetValue(newHealthValue);
+            }
+
+            
+            
+
         }
 
         public override void OnHit(WeaponProfile damageSourceProfile)
         {
             Debug.Log("Player Hit.");
-            base.OnHit(damageSourceProfile);
+            base.OnHit(damageSourceProfile);    //Check damage type against target type
 
-            onHit.Raise();  //Screen flash, etc
+            onDamage.Raise();  //Screen flash, etc     This may have to be called elsewhere as it may trigger automatically
         }
 
         public override void OnHit(WeaponProfile damageSourceProfile, ProjectileBase projectile)
@@ -62,16 +107,19 @@ namespace Game.Combat
             Debug.Log("Player Hit.");
             base.OnHit(damageSourceProfile, projectile);
 
-            onHit.Raise();  //Screen flash, etc
+            onDamage.Raise();  //Screen flash, etc     This may have to be called elsewhere as it may trigger automatically
         }
 
         public override void Die()
         {
             Debug.Log("Player Killed.");
-            base.Die(); //Is any base functionality needed?
 
             //Pause game, bring up reset screen
-            onDefeat.Raise();
+            if (onDefeat != null)
+            {
+                onDefeat.Raise();
+            }
+
         }
     }
 }
