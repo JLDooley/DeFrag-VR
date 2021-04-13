@@ -1061,7 +1061,7 @@ PrefabInstance:
     - target: {fileID: 651383679779667814, guid: 6712163d1cdfac4479b8fec992efef2e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 651383679779667814, guid: 6712163d1cdfac4479b8fec992efef2e,
         type: 3}
@@ -1120,6 +1120,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6712163d1cdfac4479b8fec992efef2e, type: 3}
+--- !u!1 &100591231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 651383679780097822, guid: 6712163d1cdfac4479b8fec992efef2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 100591230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &100591232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100591231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f3c4e951f840b4fb61f9dbaf8e5953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: {fileID: 11400000, guid: 7cfc12ffcde896e42b1ebfb91ff60938, type: 2}
+  parentEntity: {fileID: 0}
+  _MaxHealth:
+    UseConstant: 1
+    ConstantValue: 100
+    Variable: {fileID: 0}
+  _CurrentHealth: {fileID: 11400000, guid: 0d165870f64eb7f4d9b45ca1b9767b2c, type: 2}
+  onDamage: {fileID: 0}
+  onHeal: {fileID: 0}
+  onDefeat: {fileID: 0}
 --- !u!1 &162446318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2242,7 @@ Transform:
   - {fileID: 595686149}
   - {fileID: 48474961}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &499489411 stripped
 Transform:
@@ -4562,7 +4590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &960199902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4637,7 +4665,7 @@ Transform:
   - {fileID: 1385647826}
   - {fileID: 499489411}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961724365
 GameObject:
@@ -7812,7 +7840,7 @@ Transform:
   - {fileID: 1346741406}
   - {fileID: 1595827345}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098380819
 GameObject:
