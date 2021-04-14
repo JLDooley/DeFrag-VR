@@ -45,6 +45,25 @@ namespace Game.Utility
         }
         #endregion
 
+        #region Custom Time Control
+        [Min(0f)]
+        public static float LocalTimeScale = 1f;
+        public static float deltaTime
+        {
+            get
+            {
+                return Time.deltaTime * LocalTimeScale;
+            }
+        }
+        public static float fixedDeltaTime
+        {
+            get
+            {
+                return Time.fixedDeltaTime * LocalTimeScale;
+            }
+        }
+        #endregion
+
         public enum DifficultyLevel
         {
             Easy, Normal, Hard
