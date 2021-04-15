@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5068120638711357760}
   - component: {fileID: 4844086613790187370}
+  - component: {fileID: 3067859977119783025}
   m_Layer: 0
   m_Name: IncreaseWaveStepNoEnemiesLeft
   m_TagString: Untagged
@@ -46,3 +47,17 @@ MonoBehaviour:
   waveStepReference: {fileID: 11400000, guid: 843ff7856862f364d8f089a7b4270883, type: 2}
   activeEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
   enemiesLeft: 0
+--- !u!114 &3067859977119783025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870149274112784031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb8bf48c475eaf41b204a5aa808575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
+  autoAssign: 1

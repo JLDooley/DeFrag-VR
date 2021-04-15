@@ -16,7 +16,8 @@ namespace Game.Utility
         [Multiline]
         public string Description = "";
 #endif
-
+        
+        #region Sets
         #region Active Enemies Set
         [SerializeField]
         private ActiveEnemiesSet _ActiveEnemiesSet;
@@ -25,6 +26,17 @@ namespace Game.Utility
             get { return _ActiveEnemiesSet; }
         }
         #endregion
+        #region
+        [SerializeField]
+        private PauseSet _PauseSet;
+        public PauseSet PauseSet
+        {
+            get { return _PauseSet; }
+        }
+        #endregion
+
+        #endregion
+
 
         public TransformVariable playerTransform;
 

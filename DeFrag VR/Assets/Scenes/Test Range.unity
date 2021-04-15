@@ -4631,6 +4631,15 @@ MonoBehaviour:
   _AI: {fileID: 960199904}
   _MaxHealth: 100
   _CurrentHealth: 100
+  onDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  onDefeat:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &960199904
 MonoBehaviour:
   m_ObjectHideFlags: 0

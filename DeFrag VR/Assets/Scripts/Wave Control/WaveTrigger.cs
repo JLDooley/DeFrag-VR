@@ -67,7 +67,7 @@ namespace Game
             //Event: Trigger Wave - Triggers WaveManager
             TriggerWaveEvent.Raise();
 
-            //Purge Active Trigger Set (disables this and unselected WaveTriggers where relevant)
+            //Purge Active Trigger Set (disables this and unselected WaveTriggers where relevant. Also removes from PauseSet)
             RuntimeSet.Purge();
 
         }
