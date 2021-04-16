@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Data;
-
+using Packages.Rider.Editor.UnitTesting;
 
 namespace Game.Utility
 {
@@ -74,6 +74,22 @@ namespace Game.Utility
                 return Time.fixedDeltaTime * LocalTimeScale;
             }
         }
+
+        private bool _IsPaused = false;
+        public bool IsPaused
+        {
+            get { return _IsPaused; }
+            set
+            {
+                if (value != _IsPaused)
+                {
+                    _IsPaused = value;
+                    Debug.Log("Pause State: " + _IsPaused);
+                    PauseGame();
+                }
+            }
+        }
+
         #endregion
 
         public enum DifficultyLevel
@@ -95,8 +111,18 @@ namespace Game.Utility
         #endregion
 
 
-
-
+        private void PauseGame()
+        {
+            if (_IsPaused)
+            {
+                PauseSet.StartPause();
+                
+            }
+            else
+            {
+                PauseSet.EndPause();
+            }
+        }
 
     }
 }
