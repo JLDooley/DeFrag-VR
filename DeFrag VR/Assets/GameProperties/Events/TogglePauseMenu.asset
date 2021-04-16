@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab4b4100c2ebf0429b438d2345a0f5a, type: 3}
   m_Name: TogglePauseMenu
   m_EditorClassIdentifier: 
-  Description: 
+  Description: Pause game and open pause menu
