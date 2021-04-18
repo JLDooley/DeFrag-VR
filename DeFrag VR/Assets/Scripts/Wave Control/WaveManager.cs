@@ -11,7 +11,9 @@ namespace Game
     /// </summary>
     public class WaveManager : MonoBehaviour
     {
-    
+        [SerializeField]
+        private GameManager gameManager;
+
         [Tooltip("Index condition to meet for triggering this Instance")]
         [Min(1)]    //Shouldn't be any waves in StageIndex 0
         public int stage;
@@ -41,7 +43,7 @@ namespace Game
         //Internal Properties
         #region Internal Propeties
         private bool spawnersDone = false;
-
+        private bool waveDone = false;
         #endregion
 
 
@@ -52,7 +54,9 @@ namespace Game
         {
             //Make sure Current Wave Step is reset to 0
             waveStep.SetValue(0);
-            
+            spawnersDone = false;
+            waveDone = false;
+
             if (StageIndex == stage && spawners.Length > 0)
             {
                 for (int i = spawners.Length-1; i >= 0; i--)
@@ -74,19 +78,52 @@ namespace Game
         /// <returns></returns>
         private IEnumerator CheckWaveDone()
         {
-        
+            float slowUpdateFrequency = gameManager.SlowUpdateFrequency;
             while (!spawnersDone)
             {
-                
+                float timer = 0f;
+                while (timer < slowUpdateFrequency)
+                {
+                    yield return new WaitWhile(() => gameManager.IsPaused);
+                    timer += GameManager.deltaTime;
+                    yield return null;
+                }
+
                 spawnersDone = CheckSpawnersStatus();
             
                 //Check every half a second, to reduce performance load (and hopefully avoid race conditions)
-                yield return new WaitForSeconds(0.5f);
+                //yield return new WaitForSeconds(0.5f);
             }
 
-            while (!ActiveEnemiesSet.IsEmpty())
+            int counter = 0;
+
+            while (!waveDone)
             {
-                yield return new WaitForSeconds(0.5f);
+                if (!ActiveEnemiesSet.IsEmpty())
+                {
+                    counter = 0;    //Reset the counter
+                    Debug.Log("Set not empty.");
+                }
+                else if (!gameManager.IsPaused)
+                {
+                    Debug.Log("GameManager not paused.");
+                    while (!gameManager.IsPaused && counter <= 3)   //Set is empty and game isn't paused (a common cause of an empty set)
+                    {
+                        counter++;  //Does the set remain empty for 3 unpaused frames
+                        Debug.Log("Counter: " + counter);
+                        yield return null;
+                    }
+                    if (counter > 3)
+                    {
+                        waveDone = true;    //If so, wave is probably done
+                    }
+                }
+                else
+                {
+                    counter = 0;    //Reset the counter
+                }
+
+                yield return new WaitForSeconds(slowUpdateFrequency);
             }
 
             Debug.Log("Wave complete, enabling WaveTriggers for next stage.");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Data;
-
+using Packages.Rider.Editor.UnitTesting;
 
 namespace Game.Utility
 {
@@ -16,7 +16,8 @@ namespace Game.Utility
         [Multiline]
         public string Description = "";
 #endif
-
+        
+        #region Sets
         #region Active Enemies Set
         [SerializeField]
         private ActiveEnemiesSet _ActiveEnemiesSet;
@@ -25,6 +26,17 @@ namespace Game.Utility
             get { return _ActiveEnemiesSet; }
         }
         #endregion
+        #region
+        [SerializeField]
+        private PauseSet _PauseSet;
+        public PauseSet PauseSet
+        {
+            get { return _PauseSet; }
+        }
+        #endregion
+
+        #endregion
+
 
         public TransformVariable playerTransform;
 
@@ -43,6 +55,41 @@ namespace Game.Utility
         {
             get { return _SlowUpdateFrequency; }
         }
+        #endregion
+
+        #region Custom Time Control
+        [Min(0f)]
+        public static float LocalTimeScale = 1f;
+        public static float deltaTime
+        {
+            get
+            {
+                return Time.deltaTime * LocalTimeScale;
+            }
+        }
+        public static float fixedDeltaTime
+        {
+            get
+            {
+                return Time.fixedDeltaTime * LocalTimeScale;
+            }
+        }
+
+        private bool _IsPaused = false;
+        public bool IsPaused
+        {
+            get { return _IsPaused; }
+            set
+            {
+                if (value != _IsPaused)
+                {
+                    _IsPaused = value;
+                    Debug.Log("Pause State: " + _IsPaused);
+                    PauseGame();
+                }
+            }
+        }
+
         #endregion
 
         public enum DifficultyLevel
@@ -64,8 +111,18 @@ namespace Game.Utility
         #endregion
 
 
-
-
+        private void PauseGame()
+        {
+            if (_IsPaused)
+            {
+                PauseSet.StartPause();
+                
+            }
+            else
+            {
+                PauseSet.EndPause();
+            }
+        }
 
     }
 }

@@ -9,9 +9,6 @@ namespace Game.Utility.Interaction
     public class HandListener : MonoBehaviour
     {
         [SerializeField]
-        protected SteamVR_Action_Boolean inputAction;
-
-        [SerializeField]
         protected SteamVR_Input_Sources source;
 
         public GameObject assignedObject;

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3184692546180203452}
   - component: {fileID: 8180495280958977056}
+  - component: {fileID: -5964374685356876283}
   m_Layer: 0
   m_Name: IncreaseWaveStep
   m_TagString: Untagged
@@ -44,3 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveStepReference: {fileID: 11400000, guid: 843ff7856862f364d8f089a7b4270883, type: 2}
+--- !u!114 &-5964374685356876283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669294958322648392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb8bf48c475eaf41b204a5aa808575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
+  autoAssign: 1

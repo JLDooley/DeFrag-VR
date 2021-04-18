@@ -87,7 +87,17 @@ namespace Game
 
                 yield return new WaitWhile(() => spawnList[i].step > currentStep);
 
-                yield return new WaitForSeconds(spawnList[i].spawnDelay);
+                //yield return new WaitForSeconds(spawnList[i].spawnDelay);
+
+                float timer = 0f;
+                while (timer < spawnList[i].spawnDelay)
+                {
+                    yield return new WaitWhile(() => gameManager.IsPaused);
+                    timer += Time.deltaTime;
+                    yield return null;
+                }
+
+                
 
                 Spawn(spawnList[i].prefab);
             }
@@ -151,7 +161,14 @@ namespace Game
                 {
                     FinishSpawner();
                 }
-                yield return new WaitForSeconds(slowUpdateFrequency);
+                //yield return new WaitForSeconds(slowUpdateFrequency);
+                float timer = 0f;
+                while (timer < slowUpdateFrequency)
+                {
+                    yield return new WaitWhile(() => gameManager.IsPaused);
+                    timer += GameManager.deltaTime;
+                    yield return null;
+                }
             }
         }
 

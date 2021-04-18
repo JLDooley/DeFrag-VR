@@ -136,6 +136,8 @@ namespace Game
 
         void FixedUpdate()
         {
+            //Physics.Simulate(GameManager.fixedDeltaTime);
+
             if (path.Length >= 2)
             {
                 TargetPathPosition();
@@ -215,7 +217,7 @@ namespace Game
             {
                 Vector3 coordinateOnPath = iTween.PointOnPath(path, pathPosition);
 
-                gameObject.transform.position = coordinateOnPath;
+                //gameObject.transform.position = coordinateOnPath;
 
                 //rb.velocity = (Vector3.Normalize(coordinateOnPath - transform.position)) * targetVelocity;
 

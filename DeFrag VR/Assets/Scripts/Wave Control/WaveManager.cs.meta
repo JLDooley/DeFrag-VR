@@ -4,6 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
   - waveStep: {fileID: 11400000, guid: 843ff7856862f364d8f089a7b4270883, type: 2}
   - ActiveEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
   - EnableWaveTriggers: {fileID: 11400000, guid: 28f1e72ff7004fe45ba654f049d3d6f4,
