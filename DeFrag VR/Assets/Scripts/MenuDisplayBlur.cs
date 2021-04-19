@@ -5,7 +5,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 namespace Game.Utility
 {
-    public class MenuDisplay : MonoBehaviour
+    public class MenuDisplayBlur : MonoBehaviour
     {
         [SerializeField]
         private Camera menuCamera;
@@ -35,6 +35,7 @@ namespace Game.Utility
 
         private void OnEnable()
         {
+            //This should be called by an event in the final version
             StartCoroutine(DisplayMenu());
         }
 

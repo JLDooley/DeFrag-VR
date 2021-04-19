@@ -1058,6 +1058,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 208080863861448982, guid: 6712163d1cdfac4479b8fec992efef2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 651383679779667814, guid: 6712163d1cdfac4479b8fec992efef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1117,6 +1122,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253889776695258030, guid: 6712163d1cdfac4479b8fec992efef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325358852076985629, guid: 6712163d1cdfac4479b8fec992efef2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681038522097986579, guid: 6712163d1cdfac4479b8fec992efef2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968039350934579527, guid: 6712163d1cdfac4479b8fec992efef2e,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162183986167623331, guid: 6712163d1cdfac4479b8fec992efef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6712163d1cdfac4479b8fec992efef2e, type: 3}
@@ -3252,7 +3282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fb53df479128e41a4b4a00a1e1e08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   spawnList:
   - step: 0
     spawnDelay: 2
@@ -4464,7 +4494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetType: {fileID: 11400000, guid: 21e1588cbebc6f343913d701ca3ceee3, type: 2}
   parentEntity: {fileID: 960199900}
-  gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
+  gameManager: {fileID: 0}
   _AI: {fileID: 960199904}
   _MaxHealth: 100
   _CurrentHealth: 100
@@ -4489,7 +4519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8080be504f00340b90ae134d1522aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
+  gameManager: {fileID: 0}
   updateFrequency: 0.3
   parentEntity: {fileID: 960199900}
   _Target: {fileID: 960199903}
@@ -5544,7 +5574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbf765d624ce194498b76bbd85cb99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   stage: 2
   spawners:
   - {fileID: 769828183}
@@ -5582,6 +5612,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fb53df479128e41a4b4a00a1e1e08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1506147991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506147993}
+  - component: {fileID: 1506147992}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1506147992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506147991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6272934a8524b7459805817259533b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorPoint: {fileID: 0}
+  menuPrefab: {fileID: 0}
+  menuProfile: {fileID: 0}
+  fadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
+  rampTime: 1
+  timeRampDown:
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - time: 1
+      value: 0
+      inSlope: -1
+      outSlope: -1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1506147993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506147991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1560950958
 GameObject:
   m_ObjectHideFlags: 0
@@ -8420,12 +8519,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveManager Stage1
       objectReference: {fileID: 0}
-    - target: {fileID: 6529220192751305737, guid: 25f1edbd193d06945b67f55359b5ace4,
-        type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885,
-        type: 2}
     - target: {fileID: 6529220192751305737, guid: 25f1edbd193d06945b67f55359b5ace4,
         type: 3}
       propertyPath: spawners.Array.size

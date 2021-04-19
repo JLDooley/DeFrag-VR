@@ -10,12 +10,21 @@ namespace Game.Utility
         GameManager gameManager;
 
         [SerializeField]
+        private Transform anchorPoint;
+
+        [SerializeField]
         private GameObject pauseMenu;
 
-        public void TogglePauseMenu()
-        {
-            pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+        [SerializeField]
+        private GameObject failStateMenu;
 
+        private void OnEnable()
+        {
+            anchorPoint = transform;
+        }
+
+        public void SetPause()
+        {
             if (gameManager != null)
             {
                 if (pauseMenu.activeInHierarchy)
@@ -33,7 +42,21 @@ namespace Game.Utility
             {
                 Debug.LogError(this.name + ": GameManager not assigned.");
             }
+        }
 
+        public void TogglePauseMenu()
+        {
+            Instantiate(pauseMenu, anchorPoint.position, anchorPoint.rotation);
+
+            SetPause();
+
+        }
+
+        public void ToggleFailStateMenu()
+        {
+            Instantiate(failStateMenu, anchorPoint.position, anchorPoint.rotation);
+
+            SetPause();
         }
     }
 }

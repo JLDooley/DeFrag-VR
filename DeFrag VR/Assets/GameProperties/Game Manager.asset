@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8325d3bf54f55c7408ab179f91c79fa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a234b27f4c7e545ae87cdd91e29405, type: 3}
   m_Name: Game Manager
   m_EditorClassIdentifier: 
-  Description: Holds references to the locations of important data
+  Description: 
   _ActiveEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
-  _PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
+  _PauseSet: {fileID: 0}
   playerTransform: {fileID: 11400000, guid: e476e2692523aa74bae5a32877bc66b2, type: 2}
-  defaultFadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
+  defaultFadeProfile: {fileID: 11400000, guid: 0d37c9cfa209b1a4ba474035ec24dda2, type: 2}
   currentFadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
   _SlowUpdateFrequency: 0.05
   difficultyLevel: 0

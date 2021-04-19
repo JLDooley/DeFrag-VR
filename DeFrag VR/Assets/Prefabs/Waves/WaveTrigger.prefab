@@ -200,7 +200,7 @@ MonoBehaviour:
   targetDestination: {fileID: 0}
   targetReference: {fileID: 11400000, guid: 92f9ba698de364549aaa536632009614, type: 2}
   movePlayerEvent: {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
-  gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   fadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
 --- !u!114 &6645420997985394881
 MonoBehaviour:
