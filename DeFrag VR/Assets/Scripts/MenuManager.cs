@@ -10,34 +10,26 @@ namespace Game.Utility
         GameManager gameManager;
 
         [SerializeField]
-        private Transform anchorPoint;
-
-        [SerializeField]
         private GameObject pauseMenu;
 
         [SerializeField]
         private GameObject failStateMenu;
 
-        [SerializeField]
         private GameObject currentMenu;
 
-        private void OnEnable()
-        {
-            anchorPoint = transform;
-        }
 
         public void TogglePauseMenu()
         {
             if (currentMenu != failStateMenu)
             {
-                CreateMenu(pauseMenu);
+                EnableMenu(pauseMenu);
             }
             
         }
 
         public void ToggleFailStateMenu()
         {
-            CreateMenu(failStateMenu);
+            EnableMenu(failStateMenu);
         }
 
         public void RemoveMenu()
@@ -51,29 +43,26 @@ namespace Game.Utility
 
         }
 
-        private void CreateMenu(GameObject menu)
+        private void EnableMenu(GameObject menu)
         {
-            Debug.Log("Current Menu: " + currentMenu);
-            
-            if (currentMenu == null)    //No menu active
+            if (currentMenu == null)
             {
-                Debug.Log("Creating new menu.");
-                currentMenu = Instantiate(menu, anchorPoint.position, anchorPoint.rotation);
+                menu.SetActive(true);
+                currentMenu = menu;
             }
-            else if (currentMenu = menu)   //This menu already exists, remove it.
+            else if (currentMenu = menu)
             {
-                Debug.Log("Destroying existing menu.");
-                Destroy(currentMenu);
+                currentMenu.SetActive(false);
+                currentMenu = null;
             }
-            else    //A different menu already exists, replace it.
+            else    //Different menu active, switch menus.
             {
-                Debug.Log("Replacing existing menu.");
-                Destroy(currentMenu);   
-                currentMenu = Instantiate(menu, anchorPoint.position, anchorPoint.rotation);
+                currentMenu.SetActive(false);
+                menu.SetActive(true);
+                currentMenu = menu;
             }
 
-            SetPause();
-
+            SetPause(); //Toggle pause state in the Game Manager
         }
 
         public void SetPause()

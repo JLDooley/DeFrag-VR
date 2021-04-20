@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TestTurret
   m_EditorClassIdentifier: 
   damageType: {fileID: 11400000, guid: 0b22bbe0065d5d84dba521b67b195432, type: 2}
-  damageAmount: 1
+  damageAmount: 40
   rateOfFire: 1
-  aimingTolerance: 10
+  aimingTolerance: 5
   rotationSpeed: 45
   pivotRange: 20
