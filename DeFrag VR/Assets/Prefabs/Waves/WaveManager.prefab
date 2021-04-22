@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529220192751305738}
-  - component: {fileID: 6529220192751305737}
   - component: {fileID: 6529220192751305739}
+  - component: {fileID: 6529220192751305737}
   m_Layer: 0
   m_Name: WaveManager
   m_TagString: Untagged
@@ -32,28 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6529220192751305737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529220192751305736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbbf765d624ce194498b76bbd85cb99a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
-  stage: 1
-  spawners: []
-  StageIndex:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: a58ee1443fd97eb4a8bf0e17faee00fa, type: 2}
-  waveStep: {fileID: 11400000, guid: 843ff7856862f364d8f089a7b4270883, type: 2}
-  ActiveEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
-  EnableWaveTriggers: {fileID: 11400000, guid: 28f1e72ff7004fe45ba654f049d3d6f4, type: 2}
 --- !u!114 &6529220192751305739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,3 +59,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6529220192751305737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529220192751305736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbf765d624ce194498b76bbd85cb99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
+  stage: 1
+  spawners: []
+  StageIndex:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a58ee1443fd97eb4a8bf0e17faee00fa, type: 2}
+  waveStep: {fileID: 11400000, guid: 843ff7856862f364d8f089a7b4270883, type: 2}
+  ActiveEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
+  EnableWaveTriggers: {fileID: 11400000, guid: 28f1e72ff7004fe45ba654f049d3d6f4, type: 2}

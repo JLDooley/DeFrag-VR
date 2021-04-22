@@ -15,9 +15,10 @@ MonoBehaviour:
   Description: 
   _ActiveEnemiesSet: {fileID: 11400000, guid: 7da05e4ae62ed614c88634e8f309bd29, type: 2}
   _PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
+  playerPrefab: {fileID: 651383679780097822, guid: 6712163d1cdfac4479b8fec992efef2e,
+    type: 3}
   playerTransform: {fileID: 11400000, guid: e476e2692523aa74bae5a32877bc66b2, type: 2}
+  MaxHealth: {fileID: 11400000, guid: 92262b4afe6027d46b17411ffac609da, type: 2}
   defaultFadeProfile: {fileID: 11400000, guid: 0d37c9cfa209b1a4ba474035ec24dda2, type: 2}
-  currentFadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
   _SlowUpdateFrequency: 0.05
   difficultyLevel: 0
-  MaxHealth: {fileID: 11400000, guid: 92262b4afe6027d46b17411ffac609da, type: 2}

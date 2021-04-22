@@ -1,28 +1,53 @@
 ﻿using Game.Data;
-using Game.Utility;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSetup : MonoBehaviour
+namespace Game.Utility
 {
-    [SerializeField]
-    private IntVariable stageIndex;
-
-    [SerializeField]
-    private GameEvent enableWaveTriggers;
-
-    private void OnEnable()
+    public class LevelSetup : MonoBehaviour
     {
-        stageIndex.SetValue(0);
+        [SerializeField]
+        private GameManager gameManager;
+
+        [SerializeField]
+        private Transform levelStartPosition;
+
+        [SerializeField]
+        private IntVariable stageIndex;
+
+        [SerializeField]
+        private GameEvent enableWaveTriggers;
+
+        private void Awake()
+        {
+            if (levelStartPosition == null)
+            {
+                levelStartPosition = transform;
+            }
+            
+            if (gameManager !=null)
+            {
+                if (gameManager.playerInstance == null)
+                {
+                    gameManager.playerInstance = Instantiate(gameManager.playerPrefab, levelStartPosition.position, levelStartPosition.rotation);
+                }
+            }
+        }
+
+        private void OnEnable()
+        {
+            stageIndex.SetValue(0);
 
         
+        }
+
+        private void Start()
+        {
+            enableWaveTriggers.Raise();
+        }
+
+
     }
-
-    private void Start()
-    {
-        enableWaveTriggers.Raise();
-    }
-
-
 }
+

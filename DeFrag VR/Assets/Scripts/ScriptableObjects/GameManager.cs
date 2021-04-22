@@ -18,6 +18,7 @@ namespace Game.Utility
 #endif
         
         #region Sets
+        [Header("Sets")]
         #region Active Enemies Set
         [SerializeField]
         private ActiveEnemiesSet _ActiveEnemiesSet;
@@ -37,13 +38,18 @@ namespace Game.Utility
 
         #endregion
 
-
+        [Header("Player Properties")]
+        public GameObject playerPrefab;
+        public GameObject playerInstance { get; set; }
         public TransformVariable playerTransform;
+        public FloatVariable MaxHealth;
 
+        [Header("Fade Profiles")]
         public FadeProfileVR defaultFadeProfile;
 
-        public FadeProfileVR currentFadeProfile;
+        public FadeProfileVR currentFadeProfile { get; set; }
 
+        [Header("Game Settings")]
         #region Slow Update Frequency
         [SerializeField]
         [Min(0.01f)]
@@ -74,7 +80,7 @@ namespace Game.Utility
                 return Time.fixedDeltaTime * LocalTimeScale;
             }
         }
-
+        //[SerializeField]
         private bool _IsPaused = false;
         public bool IsPaused
         {
@@ -102,13 +108,6 @@ namespace Game.Utility
         /// </summary>
         public DifficultyLevel difficultyLevel;
 
-        #region External Stats
-        //[SerializeField]
-        //private FloatReference _MaxHealth;
-        public FloatVariable MaxHealth;
-
-
-        #endregion
 
 
         private void PauseGame()
