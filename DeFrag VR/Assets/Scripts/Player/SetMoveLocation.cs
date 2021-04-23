@@ -5,53 +5,63 @@ using Game.Data;
 
 namespace Game.Utility
 {
+    /// <summary>
+    /// Place on objects used to move the player around (e.g. Triggers) and call as part of the trigger.
+    /// </summary>
     public class SetMoveLocation : MonoBehaviour
     {
         [SerializeField]
-        private Transform targetDestination;
+        private Transform DefaultTargetDestination;
 
         [SerializeField]
         private TransformVariable targetReference;
 
         [SerializeField]
-        private GameEvent movePlayerEvent;
+        private EventRaiser movePlayerEvents;
 
         [SerializeField]
         private GameManager gameManager;
 
+        [Tooltip("To be passed to the GameManager for reference by the MovePlayer script.")]
         [SerializeField]
         private FadeProfileVR fadeProfile;
 
-        public void SetDestinationAndMove()
+        public void UseDefaultTarget()
         {
-            //Debug.Log("Preparing to move player.");
-            if (targetDestination != null)
+            if (gameManager != null)
             {
-                //Debug.Log("Destination provided: " + targetDestination);
-                if (gameManager != null)
+                if (fadeProfile != null)
                 {
-                    //Debug.Log("GameManager present.");
-                    if (fadeProfile != null)
-                    {
-                        //Debug.Log("FadeProfile available.");
-                        gameManager.currentFadeProfile = fadeProfile;
-                    }
-                    else
-                    {
-                        //Debug.Log("Using default FadeProfile.");
-                        gameManager.currentFadeProfile = gameManager.defaultFadeProfile;
-                    }
+                    gameManager.QueueFadeProfile(fadeProfile);
                 }
-                
-                targetReference.SetTransformValue(targetDestination);
-                //Debug.Log(targetDestination.position);
-                //Debug.Log("Moving");
-                movePlayerEvent.Raise();
+                else
+                {
+                    Debug.Log(gameObject.name + ": No FadeProfile found, using default FadeProfile.");
+                    gameManager.QueueFadeProfile(gameManager.defaultFadeProfile);
+                }
+            }
+
+
+            //Debug.Log("Preparing to move player.");
+            if (DefaultTargetDestination != null)
+            {
+                SetDestinationAndMove(DefaultTargetDestination);
             }
             else
             {
                 Debug.LogError(this + ": No destination provided.");
             }
+
+        }
+
+        public void SetDestinationAndMove(Transform target)
+        {
+            //Debug.Log("Destination provided: " + targetDestination);                
+            targetReference.SetTransformValue(target); 
+            //Debug.Log(targetDestination.position);
+            //Debug.Log("Moving");
+            movePlayerEvents.Raise();
+
 
         }
 

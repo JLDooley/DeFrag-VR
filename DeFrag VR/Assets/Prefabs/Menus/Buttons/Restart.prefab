@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2845911458186704777
+--- !u!114 &3059572927849418431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,19 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 424457677037337523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb63b20da159ca41ada1f7b6bf1236a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 9f5c4537cc8fc3b49abc0141a34c8981, type: 2}
-  useLoadingScreen: 0
-  loadScreenLocation: {fileID: 0}
-  loadScreenLocationVariable: {fileID: 0}
-  minLoadingWaitTime: 0
-  loadingScreenEvent: {fileID: 0}
-  profileVR: {fileID: 11400000, guid: 7574a87595b81bb4da1ca6eec818345c, type: 2}
+  Description: 
+  delay: 0
+  onRaiseGameEvents:
+  - {fileID: 11400000, guid: 736fc95e23c0c3041934bbeccc8a039f, type: 2}
+  onRaiseEvents:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8728842621691801963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,8 +31,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30e44b0b5f77c248989c9d15a8ea3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   targetScene: {fileID: 11400000, guid: 9f5c4537cc8fc3b49abc0141a34c8981, type: 2}
-  sceneChangeEvent: {fileID: 11400000, guid: 7bfbc645ca2a3a347b6e0a07543726e8, type: 2}
+  sceneChangeEvents: {fileID: 3059572927849418431}
+  fadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
 --- !u!1001 &2156229956370239808
 PrefabInstance:
   m_ObjectHideFlags: 0

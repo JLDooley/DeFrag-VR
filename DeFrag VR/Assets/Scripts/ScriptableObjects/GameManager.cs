@@ -49,6 +49,8 @@ namespace Game.Utility
 
         public FadeProfileVR currentFadeProfile { get; set; }
 
+        public Queue<FadeProfileVR> fadeQueue = new Queue<FadeProfileVR>();
+
         [Header("Game Settings")]
         #region Slow Update Frequency
         [SerializeField]
@@ -120,6 +122,23 @@ namespace Game.Utility
             else
             {
                 PauseSet.EndPause();
+            }
+        }
+
+        public void QueueFadeProfile(FadeProfileVR fadeProfile)
+        {
+            fadeQueue.Enqueue(fadeProfile);
+        }
+
+        public void SetCurrentFadeProfile()
+        {
+            if (fadeQueue.Count > 0)
+            {
+                currentFadeProfile = fadeQueue.Dequeue();
+            }
+            else
+            {
+                currentFadeProfile = defaultFadeProfile;
             }
         }
 

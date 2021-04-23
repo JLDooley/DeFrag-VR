@@ -17,7 +17,14 @@ namespace Game.Utility
         private IntVariable stageIndex;
 
         [SerializeField]
-        private GameEvent enableWaveTriggers;
+        private EventRaiser initialStartupEvents;
+
+        [SerializeField]
+        private EventRaiser playerFadeInEvents;
+
+        [SerializeField]
+        private EventRaiser finalStartupEvents;
+
 
         private void Awake()
         {
@@ -28,9 +35,14 @@ namespace Game.Utility
             
             if (gameManager !=null)
             {
+                //GameObject player = gameManager.playerInstance;   //Doesn't work, need to directly reference
                 if (gameManager.playerInstance == null)
                 {
                     gameManager.playerInstance = Instantiate(gameManager.playerPrefab, levelStartPosition.position, levelStartPosition.rotation);
+                }
+                else
+                {
+                    gameManager.playerInstance.transform.SetPositionAndRotation(levelStartPosition.position, levelStartPosition.rotation);
                 }
             }
         }
@@ -39,12 +51,29 @@ namespace Game.Utility
         {
             stageIndex.SetValue(0);
 
-        
+            StartCoroutine(StartUp());
         }
 
-        private void Start()
+        private IEnumerator StartUp()
         {
-            enableWaveTriggers.Raise();
+            if (initialStartupEvents != null)
+            {
+                initialStartupEvents.Raise();
+            }
+            
+            yield return null;
+
+            if (playerFadeInEvents != null)
+            {
+                playerFadeInEvents.Raise();
+            }
+
+            yield return null;
+
+            if (finalStartupEvents != null)
+            {
+                finalStartupEvents.Raise();
+            }
         }
 
 

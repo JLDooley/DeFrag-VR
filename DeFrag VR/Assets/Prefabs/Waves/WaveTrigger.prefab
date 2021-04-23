@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 2177638299653722154}
   - component: {fileID: 8938404109303068073}
   - component: {fileID: 6645420997985394881}
+  - component: {fileID: 7273385791320433604}
   m_Layer: 0
   m_Name: WaveTrigger
   m_TagString: Untagged
@@ -143,22 +144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetType: {fileID: 0}
   parentEntity: {fileID: 0}
+  onHitGameEvent: []
   onHitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2177638299653722154}
-        m_MethodName: OnWaveTriggered
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8938404109303068073}
-        m_MethodName: SetDestinationAndMove
+        m_MethodName: UseDefaultTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -197,9 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0014ed01731b5544594eae363f4d75ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDestination: {fileID: 0}
+  DefaultTargetDestination: {fileID: 0}
   targetReference: {fileID: 11400000, guid: 92f9ba698de364549aaa536632009614, type: 2}
-  movePlayerEvent: {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
+  movePlayerEvents: {fileID: 7273385791320433604}
   gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   fadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
 --- !u!114 &6645420997985394881
@@ -216,3 +207,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
   autoAssign: 0
+--- !u!114 &7273385791320433604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126445809910155390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 
+  delay: 0
+  onRaiseGameEvents:
+  - {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
+  onRaiseEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2177638299653722154}
+        m_MethodName: OnWaveTriggered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

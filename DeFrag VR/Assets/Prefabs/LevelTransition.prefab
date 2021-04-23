@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914478595077828071}
+  - component: {fileID: 7763212361247738326}
+  - component: {fileID: 8454775816839022876}
   - component: {fileID: 914478595077828070}
+  - component: {fileID: 595668892}
   - component: {fileID: 914478595077828073}
   m_Layer: 0
   m_Name: LevelTransition
@@ -32,6 +35,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7763212361247738326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914478595077828072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255ee5d0646b5bb46b81417b2ff019fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a3de06ea6038e234c9635ab5e2c7cb6b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 914478595077828073}
+        m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8454775816839022876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914478595077828072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255ee5d0646b5bb46b81417b2ff019fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9cea6db762439454d9074ad7fd651106, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 914478595077828073}
+        m_MethodName: StartLoadingScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &914478595077828070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,7 +106,34 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 914478595077828073}
-        m_MethodName: LaunchCoroutine
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &595668892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914478595077828072}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255ee5d0646b5bb46b81417b2ff019fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7bfbc645ca2a3a347b6e0a07543726e8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 914478595077828073}
+        m_MethodName: StartLoadingScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -71,14 +155,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb63b20da159ca41ada1f7b6bf1236a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   targetScene:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 9f5c4537cc8fc3b49abc0141a34c8981, type: 2}
-  useLoadingScreen: 1
-  loadScreenLocation: {fileID: 0}
-  loadScreenLocationVariable: {fileID: 11400000, guid: 92f9ba698de364549aaa536632009614,
-    type: 2}
+  fadeProfile: {fileID: 0}
   minLoadingWaitTime: 5
-  loadingScreenEvent: {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
-  profileVR: {fileID: 11400000, guid: 7574a87595b81bb4da1ca6eec818345c, type: 2}
+  movePlayerEvent: {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
+  loadingScreenEvent: {fileID: 11400000, guid: 648aa2d217e89b540978b25abeb13d54, type: 2}

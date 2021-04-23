@@ -34,7 +34,12 @@ namespace Game.Utility
 
         public void MovePlayerTo()
         {
-            fadeProfile = gameManager.currentFadeProfile;
+            if (gameManager != null)
+            {
+                gameManager.SetCurrentFadeProfile();
+                fadeProfile = gameManager.currentFadeProfile;
+            }
+            
             Vector3 position = destination.posValue;
             Quaternion rotation = destination.rotValue;
 

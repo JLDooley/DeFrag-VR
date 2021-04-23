@@ -701,6 +701,9 @@ GameObject:
   m_Component:
   - component: {fileID: 79364281}
   - component: {fileID: 79364280}
+  - component: {fileID: 79364284}
+  - component: {fileID: 79364283}
+  - component: {fileID: 79364282}
   m_Layer: 0
   m_Name: LevelSetup
   m_TagString: Untagged
@@ -723,7 +726,9 @@ MonoBehaviour:
   gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   levelStartPosition: {fileID: 0}
   stageIndex: {fileID: 11400000, guid: a58ee1443fd97eb4a8bf0e17faee00fa, type: 2}
-  enableWaveTriggers: {fileID: 11400000, guid: 28f1e72ff7004fe45ba654f049d3d6f4, type: 2}
+  initialStartupEvents: {fileID: 79364284}
+  playerFadeInEvents: {fileID: 79364283}
+  finalStartupEvents: {fileID: 79364282}
 --- !u!4 &79364281
 Transform:
   m_ObjectHideFlags: 0
@@ -738,6 +743,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79364282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79364279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 'Level Setup
+
+    Final Startup Events'
+  delay: 2
+  onRaiseGameEvents:
+  - {fileID: 11400000, guid: 28f1e72ff7004fe45ba654f049d3d6f4, type: 2}
+  onRaiseEvents:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &79364283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79364279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 'Level Setup
+
+    Player Fade Events'
+  delay: 0
+  onRaiseGameEvents:
+  - {fileID: 11400000, guid: a3de06ea6038e234c9635ab5e2c7cb6b, type: 2}
+  onRaiseEvents:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &79364284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79364279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 'Level Setup
+
+    Initial Startup Events'
+  delay: 0
+  onRaiseGameEvents: []
+  onRaiseEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
+        m_MethodName: set_IsPaused
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &96143693
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,51 +2500,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &595668890 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 914478595077828072, guid: d4291ac3062588847beae628de4ec159,
-    type: 3}
-  m_PrefabInstance: {fileID: 1391727310}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &595668891 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 914478595077828073, guid: d4291ac3062588847beae628de4ec159,
-    type: 3}
-  m_PrefabInstance: {fileID: 1391727310}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595668890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb63b20da159ca41ada1f7b6bf1236a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &595668892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595668890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 255ee5d0646b5bb46b81417b2ff019fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 7bfbc645ca2a3a347b6e0a07543726e8, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 595668891}
-        m_MethodName: LaunchCoroutine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &595686148
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,11 +5607,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTransition
       objectReference: {fileID: 0}
-    - target: {fileID: 914478595077828072, guid: d4291ac3062588847beae628de4ec159,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4291ac3062588847beae628de4ec159, type: 3}
 --- !u!1 &1487332842
@@ -6556,6 +6584,11 @@ PrefabInstance:
       propertyPath: targetDestination
       value: 
       objectReference: {fileID: 1145133967}
+    - target: {fileID: 8938404109303068073, guid: 4b55fb4f5df948148b4d25212f36247e,
+        type: 3}
+      propertyPath: DefaultTargetDestination
+      value: 
+      objectReference: {fileID: 1487332845}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b55fb4f5df948148b4d25212f36247e, type: 3}
 --- !u!43 &1657709213
@@ -8498,6 +8531,11 @@ PrefabInstance:
     - target: {fileID: 8938404109303068073, guid: 4b55fb4f5df948148b4d25212f36247e,
         type: 3}
       propertyPath: targetDestination
+      value: 
+      objectReference: {fileID: 566543241}
+    - target: {fileID: 8938404109303068073, guid: 4b55fb4f5df948148b4d25212f36247e,
+        type: 3}
+      propertyPath: DefaultTargetDestination
       value: 
       objectReference: {fileID: 566543241}
     m_RemovedComponents: []

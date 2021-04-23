@@ -4,7 +4,11 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - targetLevel: {fileID: 11400000, guid: aaa6bdce22e911e49897c8dd8e672223, type: 2}
+  - gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
+  - fadeProfile: {instanceID: 0}
+  - movePlayerEvent: {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
+  - loadingScreenEvent: {fileID: 11400000, guid: 648aa2d217e89b540978b25abeb13d54,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
