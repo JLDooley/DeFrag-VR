@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7365019684693669719}
   - component: {fileID: 7365019684693669720}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ProjectileTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7365019684749152911}
   - component: {fileID: 7365019684749152944}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TracerTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

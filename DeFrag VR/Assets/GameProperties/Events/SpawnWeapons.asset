@@ -7,15 +7,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 209caee4acb1b8b44a3220a54b7bcadc, type: 3}
-  m_Name: LoadingScreenFade
+  m_Script: {fileID: 11500000, guid: 7ab4b4100c2ebf0429b438d2345a0f5a, type: 3}
+  m_Name: SpawnWeapons
   m_EditorClassIdentifier: 
   Description: 
-  fadeInColour: {r: 0, g: 0, b: 0, a: 0}
-  fadeOutColour: {r: 1, g: 1, b: 1, a: 1}
-  fadeTime:
-    UseConstant: 1
-    ConstantValue: 1
-    Variable: {fileID: 0}

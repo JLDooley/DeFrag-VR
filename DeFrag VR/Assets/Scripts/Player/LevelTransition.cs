@@ -16,8 +16,8 @@ namespace Game.Utility
         [SerializeField]
         private IntReference targetScene;
 
-        [SerializeField]
-        private FadeProfileVR fadeProfile;
+        //[SerializeField]
+        //private FadeProfileVR fadeProfile;
 
         [SerializeField]
         private float minLoadingWaitTime;

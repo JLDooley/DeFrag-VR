@@ -44,13 +44,34 @@ namespace Game.Utility.Interaction
 
             #endregion
 
-            if (rightPrefab == null && leftPrefab == null)  //First time setup check
+
+        }
+
+        public void SpawnModels()
+        {
+            if (rightPrefab == null && leftPrefab == null)
             {
-                rightPrefab = Instantiate(rightHandPrefab);
-                leftPrefab = Instantiate(leftHandPrefab);
+                if (!handsSwapped)
+                {
+                    rightPrefab = Instantiate(rightHandPrefab);
+                    leftPrefab = Instantiate(leftHandPrefab);
+                }
+                else
+                {
+                    rightPrefab = Instantiate(leftHandPrefab);
+                    leftPrefab = Instantiate(rightHandPrefab);
+                }
 
                 SetModels();
             }
+        }
+
+        public void RemoveModels()
+        {
+            UnsetModels();
+
+            Destroy(rightPrefab);
+            Destroy(leftPrefab);
         }
 
         public void SwapHands()
@@ -59,37 +80,13 @@ namespace Game.Utility.Interaction
             {
                 Debug.Log("Swapping Hands.");
 
-                UnsetModels();
-
-                //if (!handsSwapped)
-                //{
-                //    rightPrefab = leftHandPrefab;
-                //    leftPrefab = rightHandPrefab;
-                //}
-                //else
-                //{
-                //    rightPrefab = rightHandPrefab;
-                //    leftPrefab = leftHandPrefab;
-                //}
-
-                Destroy(rightPrefab);
-                Destroy(leftPrefab);
-
-                if (!handsSwapped)
-                {
-                    rightPrefab = Instantiate(leftHandPrefab);
-                    leftPrefab = Instantiate(rightHandPrefab);
-                }
-                else
-                {
-                    rightPrefab = Instantiate(rightHandPrefab);
-                    leftPrefab = Instantiate(leftHandPrefab);
-                }
+                RemoveModels();
 
                 handsSwapped = !handsSwapped;
 
+                SpawnModels();
                 
-                SetModels();
+                //SetModels();
             }
         }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7640001451868556980}
   - component: {fileID: 7640001451868556981}
   - component: {fileID: 8318771168824334999}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TestGun2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7640001452358725663}
   - component: {fileID: 7640001452358725660}
   - component: {fileID: 7640001452358725661}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlaceholderModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1390005363722413391}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
