@@ -13,22 +13,37 @@ namespace Game.Utility
         private GameObject pauseMenu;
 
         [SerializeField]
+        private GameObject successStateMenu;
+
+        [SerializeField]
         private GameObject failStateMenu;
 
+        [SerializeField]
         private GameObject currentMenu;
 
 
         public void TogglePauseMenu()
         {
-            if (currentMenu != failStateMenu)
+            if (currentMenu != successStateMenu && currentMenu != failStateMenu)
             {
+                //Debug.Log("Toggle Pause Menu.");
+
                 EnableMenu(pauseMenu);
             }
             
         }
 
+        public void ToggleSuccessStateMenu()
+        {
+            //Debug.Log("Toggle Success State Menu.");
+
+            EnableMenu(successStateMenu);
+        }
+
         public void ToggleFailStateMenu()
         {
+            //Debug.Log("Toggle Fail State Menu.");
+
             EnableMenu(failStateMenu);
         }
 
@@ -36,10 +51,11 @@ namespace Game.Utility
         {
             if (currentMenu != null)
             {
-                Destroy(currentMenu);
+                currentMenu.SetActive(false);
+                currentMenu = null;
             }
 
-            SetPause();
+            //SetPause();   //Will call this separately so that the game doesn't unpause while fading to change scene
 
         }
 
@@ -65,6 +81,9 @@ namespace Game.Utility
             SetPause(); //Toggle pause state in the Game Manager
         }
 
+        /// <summary>
+        /// Pauses the game if a menu is active, otherwise unpauses the game.
+        /// </summary>
         public void SetPause()
         {
             if (gameManager != null)

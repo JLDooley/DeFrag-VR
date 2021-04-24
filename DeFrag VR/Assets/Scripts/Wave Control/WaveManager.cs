@@ -33,11 +33,18 @@ namespace Game
         private ActiveEnemiesSet ActiveEnemiesSet;
 
         /// <summary>
-        /// Triggers WaveHandler via a Game Event Listener.
+        /// Trigger immediate wave complete events (e.g. music changes).
         /// </summary>
         [SerializeField]
-        [Tooltip("Triggers WaveHandler via a Game Event Listener.")]
-        private GameEvent EnableWaveTriggers;
+        [Tooltip("Trigger immediate wave complete events (e.g. music changes).")]
+        private EventRaiser WaveCompleteEvent;
+
+        /// <summary>
+        /// Triggers WaveHandler or Level Complete Menu via a Game Event Listener.
+        /// </summary>
+        [SerializeField]
+        [Tooltip("Triggers WaveHandler or Level Complete Menu via a Game Event Listener.")]
+        private EventRaiser DelayedWaveCompleteEvent;
 
         #endregion
         //Internal Properties
@@ -68,7 +75,7 @@ namespace Game
             else if (spawners.Length <= 0)
             {
                 Debug.LogError("No spawners detected, preparing next stage.");
-                EnableWaveTriggers.Raise();
+                WaveCompleteEvent.Raise();
             }
         }
 
@@ -102,7 +109,7 @@ namespace Game
                 if (!ActiveEnemiesSet.IsEmpty())
                 {
                     counter = 0;    //Reset the counter
-                    Debug.Log("Set not empty.");
+                    //Debug.Log("Set not empty.");
                 }
                 else if (!gameManager.IsPaused)
                 {
@@ -129,7 +136,8 @@ namespace Game
             Debug.Log("Wave complete, enabling WaveTriggers for next stage.");
 
             //Event: Enable Wave Triggers
-            EnableWaveTriggers.Raise();
+            WaveCompleteEvent.Raise();     //If this is the WaveManager for the final wave, trigger the level complete events instead
+            DelayedWaveCompleteEvent.Raise();
         }
 
         /// <summary>
