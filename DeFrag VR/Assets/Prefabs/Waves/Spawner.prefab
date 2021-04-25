@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fb53df479128e41a4b4a00a1e1e08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 11400000, guid: 738194be9325a2b4281a1841ea9c7885, type: 2}
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   spawnList: []
   path:
   - {fileID: 3527126101607717002}

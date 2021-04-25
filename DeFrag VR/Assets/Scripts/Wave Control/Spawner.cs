@@ -48,6 +48,7 @@ namespace Game
 
         public void Raise()
         {
+            Debug.Log(gameObject.name + ": Starting Spawner");
             _SpawnerActive = true;
 
             spawnListFinished = false;
@@ -83,11 +84,24 @@ namespace Game
 
             for (int i = 0; i < spawnList.Length; i++)
             {
+                //Debug.Log(gameObject.name + ": Checking for active enemy.");
                 yield return new WaitWhile(() => spawnActiveEnemy != null);
 
+                //Debug.Log(gameObject.name + ": Checking step condition met.");
                 yield return new WaitWhile(() => spawnList[i].step > currentStep);
 
-                yield return new WaitForSeconds(spawnList[i].spawnDelay);
+                //yield return new WaitForSeconds(spawnList[i].spawnDelay);
+
+                //Debug.Log(gameObject.name + ": Starting spawn delay timer.");
+                float timer = 0f;
+                while (timer < spawnList[i].spawnDelay)
+                {
+                    yield return new WaitWhile(() => gameManager.IsPaused);
+                    timer += Time.deltaTime;
+                    yield return null;
+                }
+
+                
 
                 Spawn(spawnList[i].prefab);
             }
@@ -101,7 +115,7 @@ namespace Game
         private IEnumerator SlowUpdate()
         {
             float slowUpdateFrequency = gameManager.SlowUpdateFrequency;
-            Debug.Log(slowUpdateFrequency);
+            //Debug.Log(slowUpdateFrequency);
 
             #region Old Code
             //while (SpawnerActive || spawnQueue.Count > 0)
@@ -151,7 +165,19 @@ namespace Game
                 {
                     FinishSpawner();
                 }
-                yield return new WaitForSeconds(slowUpdateFrequency);
+                //yield return new WaitForSeconds(slowUpdateFrequency);
+                float timer = 0f;
+                while (timer < slowUpdateFrequency)
+                {
+                    //if (gameManager.IsPaused)
+                    //{
+                    //    Debug.Log("Pause State: " + gameManager.IsPaused);
+                    //}
+                    //Debug.Log("Pause State: " + gameManager.IsPaused);
+                    yield return new WaitWhile(() => gameManager.IsPaused);
+                    timer += GameManager.deltaTime;
+                    yield return null;
+                }
             }
         }
 
@@ -185,7 +211,7 @@ namespace Game
             //    }
             //}
             #endregion
-            //Debug.Log("Spawner: " + gameObject.name + "; Spawning: " + spawnProfile.prefab);
+            Debug.Log("Spawner: " + gameObject.name + "; Spawning: " + spawnProfile.prefab);
             spawnActiveEnemy = Instantiate(spawnProfile.prefab, transform.position, transform.rotation);
 
             //Assign path

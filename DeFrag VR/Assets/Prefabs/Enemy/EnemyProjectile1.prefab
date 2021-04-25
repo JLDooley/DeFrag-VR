@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 4758532421601103639}
   - component: {fileID: -5417715685536916997}
   - component: {fileID: 9043643870296193378}
+  - component: {fileID: 2513013662932782911}
   m_Layer: 2
   m_Name: EnemyProjectile1
   m_TagString: Untagged
@@ -309,6 +310,20 @@ MonoBehaviour:
   rb: {fileID: -5417715685536916997}
   ignoreAutoAim: 1
   OnHitEvent: {fileID: 0}
+--- !u!114 &2513013662932782911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5430269034972903049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb8bf48c475eaf41b204a5aa808575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
+  autoAssign: 1
 --- !u!1 &9007082833767058800
 GameObject:
   m_ObjectHideFlags: 0

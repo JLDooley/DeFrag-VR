@@ -18,9 +18,9 @@ namespace Game.Combat
         //What exactly these get/set will be defined in derived classes
         public virtual float MaxHealth { get; set; }
 
-
         public virtual float CurrentHealth { get; set; }
 
+        public virtual bool targetInvincible { get; set; }
         #endregion
 
         [Tooltip("The root object of the hierarchy to be destroyed on death. Defaults to this object if blank, or the parentEntity of an EnemyAI if present.")]

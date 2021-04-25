@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8eb63b20da159ca41ada1f7b6bf1236a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
+  - fadeProfile: {instanceID: 0}
+  - movePlayerEvent: {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
+  - loadingScreenEvent: {fileID: 11400000, guid: 648aa2d217e89b540978b25abeb13d54,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

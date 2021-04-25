@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Utility;
+using UnityEngine;
 
 namespace Game.Data
 {
@@ -9,6 +10,12 @@ namespace Game.Data
         {
             for (int i = Items.Count-1; i >= 0; i--)
             {
+                //If the active WaveTrigger instance was added to the PauseSet, unsubscribe it now.
+                if (Items[i].gameObject.TryGetComponent<Suspendable>(out Suspendable suspendable))
+                {
+                    suspendable.UnsubscribeToSet();
+                }
+
                 Items[i].gameObject.SetActive(false);
             }
         }

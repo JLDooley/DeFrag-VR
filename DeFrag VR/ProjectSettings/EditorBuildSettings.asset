@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Osiris.unity
     guid: a00be6e0c3b514d48af046f895ced986
+  - enabled: 1
+    path: Assets/Scenes/Test Range.unity
+    guid: 9196eea05bf90014e8b441698b831cba
   m_configObjects: {}

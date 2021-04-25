@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: 
   fadeInColour: {r: 0, g: 0, b: 0, a: 0}
-  fadeOutColour: {r: 0, g: 0, b: 0, a: 1}
+  fadeOutColour: {r: 1, g: 1, b: 1, a: 1}
   fadeTime:
     UseConstant: 1
-    ConstantValue: 2
+    ConstantValue: 1
     Variable: {fileID: 0}

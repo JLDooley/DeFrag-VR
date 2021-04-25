@@ -1,28 +1,82 @@
 ﻿using Game.Data;
-using Game.Utility;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSetup : MonoBehaviour
+namespace Game.Utility
 {
-    [SerializeField]
-    private IntVariable stageIndex;
-
-    [SerializeField]
-    private GameEvent enableWaveTriggers;
-
-    private void OnEnable()
+    public class LevelSetup : MonoBehaviour
     {
-        stageIndex.SetValue(0);
+        [SerializeField]
+        private GameManager gameManager;
 
-        
+        [SerializeField]
+        private Transform levelStartPosition;
+
+        [SerializeField]
+        private IntVariable stageIndex;
+
+        [SerializeField]
+        private EventRaiser initialStartupEvents;
+
+        [SerializeField]
+        private EventRaiser playerFadeInEvents;
+
+        [SerializeField]
+        private EventRaiser finalStartupEvents;
+
+
+        private void Awake()
+        {
+            if (levelStartPosition == null)
+            {
+                levelStartPosition = transform;
+            }
+            
+            if (gameManager !=null)
+            {
+                //GameObject player = gameManager.playerInstance;   //Doesn't work, need to directly reference
+                if (gameManager.playerInstance == null)
+                {
+                    gameManager.playerInstance = Instantiate(gameManager.playerPrefab, levelStartPosition.position, levelStartPosition.rotation);
+                }
+                else
+                {
+                    gameManager.playerInstance.transform.SetPositionAndRotation(levelStartPosition.position, levelStartPosition.rotation);
+                }
+            }
+        }
+
+        private void OnEnable()
+        {
+            stageIndex.SetValue(0);
+
+            StartCoroutine(StartUp());
+        }
+
+        private IEnumerator StartUp()
+        {
+            if (initialStartupEvents != null)
+            {
+                initialStartupEvents.Raise();
+            }
+            
+            yield return null;
+
+            if (playerFadeInEvents != null)
+            {
+                playerFadeInEvents.Raise();
+            }
+
+            yield return null;
+
+            if (finalStartupEvents != null)
+            {
+                finalStartupEvents.Raise();
+            }
+        }
+
+
     }
-
-    private void Start()
-    {
-        enableWaveTriggers.Raise();
-    }
-
-
 }
+

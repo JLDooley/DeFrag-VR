@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Data;
+using Game.Utility;
 
 namespace Game
 {
@@ -24,6 +25,12 @@ namespace Game
                 if(triggerArray[i].RequiredIndex == StageIndex)
                 {
                     triggerArray[i].gameObject.SetActive(true);
+
+                    //Add the active WaveTrigger instance to the PauseSet, so it can be disabled when pausing.
+                    if (triggerArray[i].gameObject.TryGetComponent<Suspendable>(out Suspendable suspendable))
+                    {
+                        suspendable.SubscribeToSet();
+                    }
                 }
             
             }
