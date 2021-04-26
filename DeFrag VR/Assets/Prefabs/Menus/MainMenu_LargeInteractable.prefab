@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 1885895031139007640}
   - component: {fileID: 7293643281576650571}
   - component: {fileID: 2398320665497640384}
+  - component: {fileID: 7217605342918709118}
   m_Layer: 0
   m_Name: Prism_Shard
   m_TagString: Untagged
@@ -1057,10 +1058,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7628617875a9664885a553d8bf1b4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetType: {fileID: 0}
+  targetType: {fileID: 11400000, guid: 823db7fa48e88e6409dcede4ec40e121, type: 2}
   parentEntity: {fileID: 0}
-  onHitGameEvent: []
-  onHitEvent:
+  onHitEvent: {fileID: 7217605342918709118}
+--- !u!114 &7217605342918709118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044217803978106054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 
+  delay: 0
+  onRaiseGameEvents: []
+  onRaiseEvents:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8371486973499723231}

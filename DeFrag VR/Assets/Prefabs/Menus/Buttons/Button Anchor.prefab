@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 9033071602910377617}
   - component: {fileID: 8120170911979517092}
   - component: {fileID: 4011408278107864060}
+  - component: {fileID: 8572759107868906904}
   m_Layer: 9
   m_Name: Button
   m_TagString: Untagged
@@ -139,10 +140,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7628617875a9664885a553d8bf1b4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetType: {fileID: 0}
+  targetType: {fileID: 11400000, guid: 823db7fa48e88e6409dcede4ec40e121, type: 2}
   parentEntity: {fileID: 0}
-  onHitGameEvent: []
-  onHitEvent:
+  onHitEvent: {fileID: 8572759107868906904}
+--- !u!114 &8572759107868906904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4835150319660283705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 
+  delay: 0
+  onRaiseGameEvents: []
+  onRaiseEvents:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &9062177240631139268

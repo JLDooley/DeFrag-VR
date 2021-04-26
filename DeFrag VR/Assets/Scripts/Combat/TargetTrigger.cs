@@ -8,26 +8,17 @@ namespace Game.Combat
 {
     public class TargetTrigger : Target
     {
-        [Space]
-        public GameEvent[] onHitGameEvent;
-        [Space]
-        public UnityEvent onHitEvent;
+        [SerializeField]
+        private EventRaiser onHitEvent;
 
         public override void OnHit(WeaponProfile damageSourceProfile)
         {
-            onHitEvent.Invoke();
+            base.OnHit(damageSourceProfile);
+        }
 
-            if (onHitGameEvent.Length > 0)
-            {
-                for (int i = 0; i < onHitGameEvent.Length; i++)
-                {
-                    if (onHitGameEvent[i] != null)
-                    {
-                        onHitGameEvent[i].Raise();
-                    }
-
-                }
-            }
+        public override void DamageReactionEvent()
+        {
+            onHitEvent.Raise();
         }
     }
 }

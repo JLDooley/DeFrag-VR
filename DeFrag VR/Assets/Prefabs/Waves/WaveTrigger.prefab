@@ -104,10 +104,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2575468104039971361}
   - component: {fileID: 1755457256012198815}
+  - component: {fileID: 1544235574206743966}
   - component: {fileID: 2177638299653722154}
   - component: {fileID: 8938404109303068073}
-  - component: {fileID: 6645420997985394881}
   - component: {fileID: 7273385791320433604}
+  - component: {fileID: 6645420997985394881}
   m_Layer: 0
   m_Name: WaveTrigger
   m_TagString: Untagged
@@ -142,10 +143,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7628617875a9664885a553d8bf1b4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetType: {fileID: 0}
+  targetType: {fileID: 11400000, guid: 823db7fa48e88e6409dcede4ec40e121, type: 2}
   parentEntity: {fileID: 0}
-  onHitGameEvent: []
-  onHitEvent:
+  onHitEvent: {fileID: 1544235574206743966}
+--- !u!114 &1544235574206743966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126445809910155390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: 'Target Trigger
+
+    On Hit Event'
+  delay: 0
+  onRaiseGameEvents: []
+  onRaiseEvents:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8938404109303068073}
@@ -193,20 +211,6 @@ MonoBehaviour:
   movePlayerEvents: {fileID: 7273385791320433604}
   gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   fadeProfile: {fileID: 11400000, guid: 9b62f42216beaf94a89599ded2d23cde, type: 2}
---- !u!114 &6645420997985394881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8126445809910155390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb8bf48c475eaf41b204a5aa808575f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
-  autoAssign: 0
 --- !u!114 &7273385791320433604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +223,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4399b0517d0eb48916e1551b8b2dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: 
+  Description: 'Set Move Location
+
+    Move Player Events'
   delay: 0
   onRaiseGameEvents:
   - {fileID: 11400000, guid: 39c9eceeaaf7e87438f9c3d909a50e82, type: 2}
@@ -237,3 +243,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6645420997985394881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126445809910155390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb8bf48c475eaf41b204a5aa808575f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseSet: {fileID: 11400000, guid: 2b5d30eb4614f384b95a7d3f202fa725, type: 2}
+  autoAssign: 0

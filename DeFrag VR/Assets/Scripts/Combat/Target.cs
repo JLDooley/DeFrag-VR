@@ -80,6 +80,11 @@ namespace Game.Combat
         {
             
         }
+
+        public virtual void DamageReactionEvent()
+        {
+
+        }
     }
 
 }

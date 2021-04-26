@@ -66,7 +66,7 @@ MonoBehaviour:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   source: 0
-  weaponProfile: {fileID: 11400000, guid: 8c3515d29df65b244810bc2a9c143c99, type: 2}
+  weaponProfile: {fileID: 11400000, guid: 64b061ec660900247a3d9d84fde0b851, type: 2}
   muzzle: {fileID: 1390005363722413391}
   range: 50
   onShootEffectPrefab: {fileID: 7365019684749152945, guid: 233f1c6ec18c7204ab2c02dfb4f784f7,
