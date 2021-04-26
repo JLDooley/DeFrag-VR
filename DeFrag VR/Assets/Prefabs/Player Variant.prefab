@@ -217,10 +217,11 @@ MonoBehaviour:
   targetType: {fileID: 11400000, guid: 7cfc12ffcde896e42b1ebfb91ff60938, type: 2}
   parentEntity: {fileID: 0}
   _MaxHealth:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 100
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: 92262b4afe6027d46b17411ffac609da, type: 2}
   _CurrentHealth: {fileID: 11400000, guid: 0d165870f64eb7f4d9b45ca1b9767b2c, type: 2}
+  gameManager: {fileID: 11400000, guid: b1b9546a6cb4e3c4784bbbbe21e180a7, type: 2}
   onDamage: {fileID: 0}
   onHeal: {fileID: 0}
   onDefeat: {fileID: 11400000, guid: 523c4d6d4467c62469556aeb9adc82f4, type: 2}
