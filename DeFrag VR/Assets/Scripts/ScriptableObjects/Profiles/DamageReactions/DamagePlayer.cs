@@ -16,7 +16,11 @@ namespace Game.Combat
 
             int amount = weaponProfile.damageAmount;
 
-            target.CurrentHealth -= amount;
+            float newHealthValue = target.CurrentHealth;
+
+            newHealthValue -= amount;
+
+            target.UpdateHealth(newHealthValue);
         }
     }
 }
