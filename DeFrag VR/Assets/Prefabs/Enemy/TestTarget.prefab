@@ -148,6 +148,11 @@ MonoBehaviour:
   _Target: {fileID: 3966235876065332079}
   _Movement: {fileID: 7789822839609763706}
   Weapons: []
+  berserkParticleEffect: {fileID: 0}
+  berserkArcEffect: {fileID: 7481994331736675448, guid: 762e84bf0bd736b418dec8ae9edb7d03,
+    type: 3}
+  arcInstances: 5
+  arcInterval: 1
 --- !u!114 &3966235876065332079
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,5 +16,7 @@ MonoBehaviour:
   scenarios:
   - action: {fileID: 11400000, guid: c534fdfa7c97c8344a58f45e3005c27d, type: 2}
     reaction: {fileID: 11400000, guid: 5b99610944618ea47a1c7e3fd52e6ece, type: 2}
+    destroyProjectile: 1
   - action: {fileID: 11400000, guid: 77c91f220c1f67e4b83e80189421dc80, type: 2}
-    reaction: {fileID: 11400000, guid: 9f4b8fdc646279d4591f37ce048aa157, type: 2}
+    reaction: {fileID: 11400000, guid: 46218cdcb1870e345bdda6e3758b10aa, type: 2}
+    destroyProjectile: 1

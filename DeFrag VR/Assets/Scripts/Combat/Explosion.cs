@@ -55,8 +55,9 @@ namespace Game.Combat
                         }
                     }
                 }
-
             }
+
+            Destroy(gameObject, 5f);
         }
     }
 }

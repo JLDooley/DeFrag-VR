@@ -120,7 +120,7 @@ namespace Game.Combat
         #endregion
         #region IsBerserk
         //IsBerserk
-
+        //Listens for a change, but doesn't cause one.
         private bool _IsBerserk = false;
         public bool IsBerserk
         {

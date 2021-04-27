@@ -165,6 +165,20 @@ namespace Game
 
         #endregion
 
+        [SerializeField]
+        private GameObject berserkParticleEffect;
+
+        [SerializeField]
+        private GameObject berserkArcEffect;
+
+        [SerializeField]
+        private int arcInstances;
+
+        [SerializeField]
+        private float arcInterval;
+
+
+
 
         private void OnEnable()
         {
@@ -193,7 +207,7 @@ namespace Game
             {
                 for (int i = Weapons.Length - 1; i >= 0; i--)
                 {
-
+                    
                 }
             }
 
@@ -236,6 +250,40 @@ namespace Game
             _PlayerPosition = gameManager.playerTransform.posValue;
         }
 
+        public void TriggerBerserk()
+        {
+            Debug.Log("Going berserk.");
+
+            IsBerserk = true;
+
+            StartCoroutine(ArcBlasts());
+        }
+
+        private IEnumerator ArcBlasts()
+        {
+            //Instantiate(berserkParticleEffect, parentEntity.transform);
+
+            int counter = 0;
+            
+            yield return new WaitForSeconds(0.5f);
+
+            while (counter < arcInstances)
+            {
+                Debug.Log("Spawning arc blast.");
+
+                GameObject currentArcBlast = Instantiate(berserkArcEffect, transform.position, Quaternion.identity);
+
+                currentArcBlast.GetComponent<AOEDamage>().spawningObject = Target;
+                currentArcBlast.GetComponent<AOEDamage>().Arc();
+
+                counter++;
+
+                yield return new WaitForSeconds(arcInterval);
+            }
+            
+
+
+        }
     }
 
 }

@@ -190,6 +190,11 @@ namespace Game.Combat
 
             Destroy(parentEntity);
         }
+
+        public override void DamageReactionEvent()
+        {
+            AI.TriggerBerserk();
+        }
     }
 }
 
