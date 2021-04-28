@@ -234,12 +234,6 @@ namespace Game
 
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
-
 
         /// <summary>
         /// Use the Player's Transform data to update the PlayerPosition Transform
@@ -253,10 +247,17 @@ namespace Game
         public void TriggerBerserk()
         {
             Debug.Log("Going berserk.");
+            if (!IsBerserk)
+            {
+                IsBerserk = true;
 
-            IsBerserk = true;
+                StartCoroutine(ArcBlasts());
+            }
+            else
+            {
+                //Some sound effect to suggest a lack of effect
+            }
 
-            StartCoroutine(ArcBlasts());
         }
 
         private IEnumerator ArcBlasts()

@@ -57,14 +57,17 @@ namespace Game.Combat
         public event EventHandler MuzzleFlashEventEmitter;
 
         #region Properties
-        [SerializeField]
+        
         private float rateOfFire;
         private float aimingTolerance;
         private float rotationSpeed;
         private float pivotRange;
 
-        #region Other Properties
         [SerializeField]
+        private float berserkMultiplier;
+
+        #region Other Properties
+
         private float timer;
         Vector3 aimVec;
         Quaternion aimQuat;
@@ -100,7 +103,7 @@ namespace Game.Combat
         #endregion
         #region IsHostile
         //IsHostile
-        [SerializeField]
+        //[SerializeField]
         private bool _IsHostile = false;
         public bool IsHostile
         {
@@ -130,6 +133,7 @@ namespace Game.Combat
                 if (value != _IsBerserk)
                 {
                     _IsBerserk = value;
+                    SetBerserk();
                 }
             }
         }
@@ -139,7 +143,7 @@ namespace Game.Combat
         }
         #endregion
         #region IsAimed
-        [SerializeField]
+        //[SerializeField]
         private bool _IsAimed = false;
         public bool IsAimed
         {
@@ -154,7 +158,7 @@ namespace Game.Combat
         }
         #endregion
         #region ShouldAttack
-        [SerializeField]
+        //[SerializeField]
         private bool _ShouldAttack = false;
         public bool ShouldAttack
         {
@@ -197,6 +201,18 @@ namespace Game.Combat
             CheckDefaultOrientation();
         }
 
+        private void SetBerserk()
+        {
+            if (IsBerserk)
+            {
+                rateOfFire = 1 / (_WeaponProfile.rateOfFire * berserkMultiplier);
+            }
+            else
+            {
+                rateOfFire = 1 / _WeaponProfile.rateOfFire;
+            }
+            
+        }
 
         void Update()
         {

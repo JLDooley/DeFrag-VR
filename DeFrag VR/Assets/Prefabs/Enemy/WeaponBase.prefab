@@ -115,7 +115,12 @@ MonoBehaviour:
     type: 3}
   muzzle: {fileID: 8744399982753577729}
   attackTelegraphDuration: 0
+  rateOfFire: 0
+  berserkMultiplier: 2
+  timer: 0
   _IsHostile: 0
+  _IsAimed: 0
+  _ShouldAttack: 0
 --- !u!1 &8712329066030910135
 GameObject:
   m_ObjectHideFlags: 0
