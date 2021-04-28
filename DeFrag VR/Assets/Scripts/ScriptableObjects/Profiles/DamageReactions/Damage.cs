@@ -16,15 +16,11 @@ namespace Game.Combat
 
             int amount = weaponProfile.damageAmount;
 
-            target.CurrentHealth -= amount; //This last, to avoid issues with destroying before effects are triggered.
+            float newHealthValue = target.CurrentHealth;
 
-            //TO DO     award points based on certain parameters (distance, hit streak?, kill streak?)
+            newHealthValue -= amount;
 
-            //TO DO     enemy pain response here (e.g. flinch and colour flash)
-
-            //target.health -= amount;
-
-            //target.health.ConstantValue -= amount;
+            target.UpdateHealth(newHealthValue);
 
         }
     }

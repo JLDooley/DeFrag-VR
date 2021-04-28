@@ -43,7 +43,7 @@ namespace Game.Combat
                 if (value != _CurrentHealth)
                 {
                     UpdateHealth(value);
-                    _CurrentHealth = value;
+                    //_CurrentHealth = value;
                     
                 }
             }
