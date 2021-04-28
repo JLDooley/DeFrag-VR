@@ -75,3 +75,358 @@ DeFrag VR/Assets/Ultimate 10 Plus Shaders/
 DeFrag VR/Assets/Ultimate 10 Plus Shaders.meta
 DeFrag VR/Assets/TextMesh Pro/
 DeFrag VR/Assets/TextMesh Pro.meta
+DeFragVR_SFX/
+DeFrag VR/Assets/Plugins/FMOD.meta
+DeFrag VR/Assets/Plugins/FMOD/addons.meta
+DeFrag VR/Assets/Plugins/FMOD/Cache.meta
+DeFrag VR/Assets/Plugins/FMOD/lib.meta
+DeFrag VR/Assets/Plugins/FMOD/platform_ios.mm
+DeFrag VR/Assets/Plugins/FMOD/platform_ios.mm.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms.meta
+DeFrag VR/Assets/Plugins/FMOD/Resources.meta
+DeFrag VR/Assets/Plugins/FMOD/src.meta
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio.meta
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor.meta
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts.meta
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FmodResonanceAudioRoomEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Editor/FmodResonanceAudioRoomEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudio.cs
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudio.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudioRoom.cs
+DeFrag VR/Assets/Plugins/FMOD/addons/ResonanceAudio/Scripts/FmodResonanceAudioRoom.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/Cache/Editor.meta
+DeFrag VR/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
+DeFrag VR/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/html5.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/ios.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/tvos.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/fmod.jar
+DeFrag VR/Assets/Plugins/FMOD/lib/android/fmod.jar.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmod.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmod.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmodL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmodL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmodstudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmodstudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmodstudioL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libfmodstudioL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libresonanceaudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/arm64-v8a/libresonanceaudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmod.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmod.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmodL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmodL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmodstudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmodstudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmodstudioL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libfmodstudioL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libresonanceaudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/armeabi-v7a/libresonanceaudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmod.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmod.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmodL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmodL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmodstudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmodstudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmodstudioL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libfmodstudioL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libresonanceaudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/android/x86/libresonanceaudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/html5/libfmodstudiounityplugin.bc
+DeFrag VR/Assets/Plugins/FMOD/lib/html5/libfmodstudiounityplugin.bc.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/html5/libfmodstudiounitypluginL.bc
+DeFrag VR/Assets/Plugins/FMOD/lib/html5/libfmodstudiounitypluginL.bc.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/ios/libfmodstudiounityplugin.a
+DeFrag VR/Assets/Plugins/FMOD/lib/ios/libfmodstudiounityplugin.a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/ios/libfmodstudiounitypluginL.a
+DeFrag VR/Assets/Plugins/FMOD/lib/ios/libfmodstudiounitypluginL.a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/ios/libresonanceaudio.a
+DeFrag VR/Assets/Plugins/FMOD/lib/ios/libresonanceaudio.a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86/libfmodstudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86/libfmodstudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86/libfmodstudioL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86/libfmodstudioL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64/libfmodstudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64/libfmodstudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64/libfmodstudioL.so
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64/libfmodstudioL.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64/libresonanceaudio.so
+DeFrag VR/Assets/Plugins/FMOD/lib/linux/x86_64/libresonanceaudio.so.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/_CodeSignature.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/Info.plist
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/Info.plist.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/MacOS.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/_CodeSignature/CodeResources
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/_CodeSignature/CodeResources.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/MacOS/fmodstudio
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudio.bundle/Contents/MacOS/fmodstudio.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/_CodeSignature.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/Info.plist
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/Info.plist.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/MacOS.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/_CodeSignature/CodeResources
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/_CodeSignature/CodeResources.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/MacOS/fmodstudioL
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/fmodstudioL.bundle/Contents/MacOS/fmodstudioL.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/_CodeSignature.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/Info.plist
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/Info.plist.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/MacOS.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/_CodeSignature/CodeResources
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/_CodeSignature/CodeResources.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/MacOS/resonanceaudio
+DeFrag VR/Assets/Plugins/FMOD/lib/mac/resonanceaudio.bundle/Contents/MacOS/resonanceaudio.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/tvos/libfmodstudiounityplugin.a
+DeFrag VR/Assets/Plugins/FMOD/lib/tvos/libfmodstudiounityplugin.a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/tvos/libfmodstudiounitypluginL.a
+DeFrag VR/Assets/Plugins/FMOD/lib/tvos/libfmodstudiounitypluginL.a.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmod.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmod.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmodL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmodL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmodstudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmodstudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmodstudioL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/arm/fmodstudioL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmod.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmod.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmodL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmodL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmodstudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmodstudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmodstudioL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x64/fmodstudioL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmod.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmod.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmodL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmodL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmodstudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmodstudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmodstudioL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/uwp/x86/fmodstudioL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86/fmodstudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86/fmodstudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86/fmodstudioL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86/fmodstudioL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86/resonanceaudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86/resonanceaudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64/fmodstudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64/fmodstudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64/fmodstudioL.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64/fmodstudioL.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64/resonanceaudio.dll
+DeFrag VR/Assets/Plugins/FMOD/lib/win/x86_64/resonanceaudio.dll.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/android.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/html5.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/ios.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/linux.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/mac.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/tvos.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/win.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/android/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/android/src/PlatformAndroid.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/android/src/PlatformAndroid.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/html5/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/html5/src/PlatformWebGL.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/html5/src/PlatformWebGL.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/ios/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/ios/src/PlatformIOS.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/ios/src/PlatformIOS.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/linux/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/linux/src/PlatformLinux.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/linux/src/PlatformLinux.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/mac/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/mac/src/PlatformMac.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/mac/src/PlatformMac.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/tvos/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/tvos/src/PlatformAppleTV.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/tvos/src/PlatformAppleTV.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/win/src.meta
+DeFrag VR/Assets/Plugins/FMOD/platforms/win/src/PlatformWindows.cs
+DeFrag VR/Assets/Plugins/FMOD/platforms/win/src/PlatformWindows.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+DeFrag VR/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/BankRefDrawer.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/BankRefDrawer.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/CreateEventPopup.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/CreateEventPopup.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorBankRef.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorBankRef.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorEventRef.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorEventRef.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorParamRef.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorParamRef.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorUtils.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EditorUtils.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventBrowser.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventBrowser.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventCache.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventCache.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventManager.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventManager.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/EventRefDrawer.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/FindAndReplace.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/FindAndReplace.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/LogViewer.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/LogViewer.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/ParamRefDrawer.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/ParamRefDrawer.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/SettingsEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/SettingsEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioBankLoaderEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioBankLoaderEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterGizmoDrawer.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioEventEmitterGizmoDrawer.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioGlobalParameterTriggerEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioGlobalParameterTriggerEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioListenerEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioListenerEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioParameterTriggerEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/StudioParameterTriggerEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/Timeline.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/Timeline/FMODEventPlayableEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Editor/Timeline/FMODEventPlayableEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/BankRefAttribute.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/BankRefAttribute.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/EventHandler.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/EventHandler.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/EventRefAttribute.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/EventRefAttribute.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/fmodplugins.cpp
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/fmodplugins.cpp.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/FMODRuntimeManagerOnGUIHelper.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/FMODRuntimeManagerOnGUIHelper.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/ParamRef.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/ParamRef.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/ParamRefAttribute.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/ParamRefAttribute.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Platform.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Platform.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformDefault.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformDefault.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformGroup.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformGroup.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformMobileHigh.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformMobileHigh.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformMobileLow.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformMobileLow.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformPlayInEditor.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/PlatformPlayInEditor.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/RuntimeManager.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/RuntimeManager.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/RuntimeUtils.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/RuntimeUtils.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Settings.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Settings.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioBankLoader.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioBankLoader.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioEventEmitter.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioEventEmitter.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioGlobalParameterTrigger.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioGlobalParameterTrigger.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioListener.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioListener.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioParameterTrigger.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/StudioParameterTrigger.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Timeline.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventPlayable.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventPlayable.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventTrack.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/Timeline/FMODEventTrack.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod_dsp.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod_dsp.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod_errors.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod_errors.cs.meta
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod_studio.cs
+DeFrag VR/Assets/Plugins/FMOD/src/Runtime/wrapper/fmod_studio.cs.meta
+DeFrag VR/Assets/Gizmos/FMOD.meta
+DeFrag VR/Assets/Gizmos/FMOD/FMODEmitter.tiff
+DeFrag VR/Assets/Gizmos/FMOD/FMODEmitter.tiff.meta
+DeFrag VR/Assets/Editor Default Resources.meta
+DeFrag VR/Assets/Gizmos.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/AddIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/AddIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/ArrowDown.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/ArrowDown.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/ArrowIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/ArrowIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/ArrowUp.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/ArrowUp.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/BankIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/BankIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/Border.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/Border.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/BrowserIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/BrowserIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/CopyIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/CopyIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/Delete.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/Delete.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/EventIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/EventIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/FolderIconClosed.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/FolderIconClosed.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/FolderIconOpen.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/FolderIconOpen.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/LevelMeter.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/LevelMeter.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/LevelMeterOff.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/LevelMeterOff.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/NotFound.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/NotFound.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/preview.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/preview.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/previewemitter.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/previewemitter.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/SearchIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/SearchIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/SearchIconBlack.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/SearchIconBlack.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/Selected.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/Selected.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/SelectedAlt.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/SelectedAlt.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/SnapshotIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/SnapshotIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/StudioIcon.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/StudioIcon.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportOpen.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportOpen.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportPlayButtonOff.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportPlayButtonOff.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportPlayButtonOn.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportPlayButtonOn.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportStopButtonOff.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportStopButtonOff.png.meta
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportStopButtonOn.png
+DeFrag VR/Assets/Editor Default Resources/FMOD/TransportStopButtonOn.png.meta
