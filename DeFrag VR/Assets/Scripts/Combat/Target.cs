@@ -26,7 +26,6 @@ namespace Game.Combat
         [Tooltip("The root object of the hierarchy to be destroyed on death. Defaults to this object if blank, or the parentEntity of an EnemyAI if present.")]
         public GameObject parentEntity;
 
-
         private void OnEnable()
         {
             Setup();

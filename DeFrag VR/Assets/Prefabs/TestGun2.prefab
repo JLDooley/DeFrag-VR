@@ -71,6 +71,7 @@ MonoBehaviour:
   range: 50
   onShootEffectPrefab: {fileID: 7365019684749152945, guid: 233f1c6ec18c7204ab2c02dfb4f784f7,
     type: 3}
+  onShootSoundEffect: event:/SFX/Weapons/Gunshot
 --- !u!1 &7640001452358725656
 GameObject:
   m_ObjectHideFlags: 0

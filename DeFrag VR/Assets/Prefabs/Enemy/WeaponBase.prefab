@@ -114,13 +114,10 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5430269034972903049, guid: 579c5e8c93688cc42b4c6a89215d0f57,
     type: 3}
   muzzle: {fileID: 8744399982753577729}
-  attackTelegraphDuration: 0
-  rateOfFire: 0
+  attackTelegraphDuration: 0.5
+  telegraphSoundEffect: event:/SFX/Enemies/DroneAttackCharge
+  onShootSoundEffect: event:/SFX/Enemies/DroneAttack
   berserkMultiplier: 2
-  timer: 0
-  _IsHostile: 0
-  _IsAimed: 0
-  _ShouldAttack: 0
 --- !u!1 &8712329066030910135
 GameObject:
   m_ObjectHideFlags: 0

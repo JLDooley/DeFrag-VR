@@ -20,6 +20,10 @@ namespace Game.Combat
         [SerializeField]
         private GameObject onShootEffectPrefab;
 
+        [SerializeField]
+        [FMODUnity.EventRef]
+        private string onShootSoundEffect;
+
         protected override void OnTriggerDown()
         {
             base.OnTriggerDown();
@@ -71,7 +75,6 @@ namespace Game.Combat
                         
 
                         //Debug.Log("Main Target Hit");
-                        //Debug.Break();
 
                         impactPoint = hit.point;
 
@@ -97,6 +100,8 @@ namespace Game.Combat
 
         private void SpawnTrail()
         {
+            ShotEffects();
+
             EffectPlayerGunTrail onShootEffect = Instantiate(onShootEffectPrefab, muzzle.position, muzzle.rotation).GetComponentInChildren<EffectPlayerGunTrail>();
 
             if (onShootEffect != null)
@@ -107,6 +112,8 @@ namespace Game.Combat
 
         private void SpawnTrail(Vector3 endPoint)
         {
+            ShotEffects();
+
             EffectPlayerGunTrail onShootEffect = Instantiate(onShootEffectPrefab, muzzle.position, muzzle.rotation).GetComponentInChildren<EffectPlayerGunTrail>();
 
             if (onShootEffect != null)
@@ -115,6 +122,11 @@ namespace Game.Combat
 
                 onShootEffect.Raise(endPoint);
             }
+        }
+
+        private void ShotEffects()
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(onShootSoundEffect, muzzle.position);
         }
 
         private void DebugHitPoint(Vector3 position, string name = "")

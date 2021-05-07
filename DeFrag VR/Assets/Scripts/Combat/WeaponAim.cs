@@ -52,12 +52,22 @@ namespace Game.Combat
         [Tooltip("Wait period before spawning a projectile.")]
         private float attackTelegraphDuration;
 
-        public event EventHandler AttackTelegraphEmitter;
+        [SerializeField]
+        [FMODUnity.EventRef]
+        private string telegraphSoundEffect;
 
-        public event EventHandler MuzzleFlashEventEmitter;
+        [SerializeField]
+        [FMODUnity.EventRef]
+        private string onShootSoundEffect;
+
+        //public event EventHandler AttackTelegraphEmitter;
+
+        //public event EventHandler MuzzleFlashEventEmitter;
 
         #region Properties
         
+
+
         private float rateOfFire;
         private float aimingTolerance;
         private float rotationSpeed;
@@ -320,17 +330,33 @@ namespace Game.Combat
         {
             Debug.Log("Shooting");
             //Some shot telegraphing, followed by the spawning of a projectile with stats from the weapon profile
-            if (AttackTelegraphEmitter != null)
+            #region Telegraph Code
+            //if (AttackTelegraphEmitter != null)
+            //{
+            //    AttackTelegraphEmitter(this, EventArgs.Empty);
+            //}
+
+            if (telegraphSoundEffect != "")
             {
-                AttackTelegraphEmitter(this, EventArgs.Empty);
+                FMODUnity.RuntimeManager.PlayOneShot(telegraphSoundEffect, muzzle.position);
             }
+
+            #endregion
 
             yield return new WaitForSecondsRealtime(attackTelegraphDuration);
 
-            if (MuzzleFlashEventEmitter != null)
+            #region Shoot Effect Code
+            //if (MuzzleFlashEventEmitter != null)
+            //{
+            //    MuzzleFlashEventEmitter(this, EventArgs.Empty);
+            //}
+
+            if (onShootSoundEffect != "")
             {
-                MuzzleFlashEventEmitter(this, EventArgs.Empty);
+                FMODUnity.RuntimeManager.PlayOneShot(onShootSoundEffect, muzzle.position);
             }
+            
+            #endregion
 
             Debug.Log("Spawning Projectile");
             GameObject prefab = Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);

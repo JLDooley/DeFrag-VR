@@ -182,7 +182,7 @@ namespace Game.Combat
         public override void Die()
         {
             onDefeat.Invoke();
-
+            
             //Remove from Active Enemies Set
             activeEnemiesSet.Remove(parentEntity);
 

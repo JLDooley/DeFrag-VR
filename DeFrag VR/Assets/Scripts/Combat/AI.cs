@@ -153,6 +153,11 @@ namespace Game
                     {
                         IsHostileEmitter(value);
                     }
+
+                    if (value == true)
+                    {
+                        OnHostileEffect();
+                    }
                 }
             }
         }
@@ -177,8 +182,17 @@ namespace Game
         [SerializeField]
         private float arcInterval;
 
+        [SerializeField]
+        [FMODUnity.EventRef]
+        private string ArcSoundEffect;
 
+        private FMOD.Studio.EventInstance arcSoundEffect;
 
+        [SerializeField]
+        [FMODUnity.EventRef]
+        private string HostileSoundEffect;
+
+        private FMOD.Studio.EventInstance hostileSoundEffect;
 
         private void OnEnable()
         {
@@ -234,6 +248,12 @@ namespace Game
 
         }
 
+        private void OnDestroy()
+        {
+            arcSoundEffect.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            arcSoundEffect.release();
+        }
+
 
         /// <summary>
         /// Use the Player's Transform data to update the PlayerPosition Transform
@@ -250,6 +270,8 @@ namespace Game
             if (!IsBerserk)
             {
                 IsBerserk = true;
+
+                OnBerserkEffect();
 
                 StartCoroutine(ArcBlasts());
             }
@@ -277,12 +299,36 @@ namespace Game
                 currentArcBlast.GetComponent<AOEDamage>().spawningObject = Target;
                 currentArcBlast.GetComponent<AOEDamage>().Arc();
 
+
+
                 counter++;
 
                 yield return new WaitForSeconds(arcInterval);
             }
-            
+        }
 
+        private void OnBerserkEffect()
+        {
+            if (ArcSoundEffect != "")
+            {
+                Debug.Log("Creating Instance: Berserk Sound Effect.");
+                //FMODUnity.RuntimeManager.PlayOneShot(arcSoundEffect, transform.position);
+                //FMODUnity.RuntimeManager.PlayOneShotAttached(arcSoundEffect, parentEntity);
+
+                arcSoundEffect = FMODUnity.RuntimeManager.CreateInstance(ArcSoundEffect);
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(arcSoundEffect, parentEntity.transform, parentEntity.GetComponent<Rigidbody>());
+
+                arcSoundEffect.start();
+            }
+        }
+
+        private void OnHostileEffect()
+        {
+            if (HostileSoundEffect != "")
+            {
+                //hostileSoundEffect = FMODUnity.RuntimeManager.CreateInstance(HostileSoundEffect);
+                FMODUnity.RuntimeManager.PlayOneShotAttached(HostileSoundEffect, gameObject);
+            }
 
         }
     }
