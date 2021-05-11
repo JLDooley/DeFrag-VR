@@ -138,15 +138,34 @@ namespace Game
         {
             //Physics.Simulate(GameManager.fixedDeltaTime);
 
-            if (path.Length >= 2)
-            {
-                TargetPathPosition();
-            }
+
 
             if (path.Length > 0)
             {
+                
+                if (pathPosition >= 1 && velocity != 0)
+                {
+                    StopObject();
+                }
+
                 VelocityCompensation();
+
+                if (path.Length >= 2)
+                {
+                    TargetPathPosition();
+                }
+
+
+
+
                 MoveObject();
+            }
+
+
+            if (path.Length > 0)
+            {
+                //VelocityCompensation();
+                //MoveObject();
             }
 
             RotateObject();
@@ -159,7 +178,7 @@ namespace Game
 
             if (pathPosition >= 1 && velocity != 0)
             {
-                StopObject();
+                //StopObject();
             }
 
         }

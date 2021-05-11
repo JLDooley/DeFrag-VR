@@ -24,7 +24,7 @@ namespace Game.Utility.Interaction
         }
 
 
-        void Update()
+       protected virtual void Update()
         {
             if (inputAction[source].stateDown)
             {

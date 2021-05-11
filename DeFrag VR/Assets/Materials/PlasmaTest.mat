@@ -20,19 +20,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cb36e88f371761c44a4c63777a3d2520, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1a41c3e209ba51c4fbb25b4d4613c183, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 4e207e6b572fa9848b6eb97fbecd86aa, type: 3}
+        m_Texture: {fileID: 2800000, guid: d2eac888094a652429c634df007d9ad9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: 1d557bc533f5684438d25d03042b1025, type: 3}
+        m_Texture: {fileID: 2800000, guid: cc667b3995f186347b95c15abbb1c3c8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Cull: 0
+    - _Cull: 2
     m_Colors:
     - _Color: {r: 118.035385, g: 1.2359726, b: 0, a: 1}
-    - _MovementDirection: {r: 0.5, g: -0.5, b: 0, a: 1}
+    - _MovementDirection: {r: 0.1, g: -0.1, b: 0, a: 1}

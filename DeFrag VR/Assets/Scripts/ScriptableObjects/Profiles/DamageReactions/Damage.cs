@@ -10,11 +10,13 @@ namespace Game.Combat
     [CreateAssetMenu(fileName = "Damage", menuName = "Profiles/Damage/Damage", order = 5)]
     public class Damage : BaseDamageReaction
     {
+        [SerializeField]
+        private float damageMultiplier = 1f;
         public override void Raise(Target target, WeaponProfile weaponProfile)
         {
             Debug.Log("Damage triggered.");
 
-            int amount = weaponProfile.damageAmount;
+            float amount = weaponProfile.damageAmount * damageMultiplier;
 
             float newHealthValue = target.CurrentHealth;
 

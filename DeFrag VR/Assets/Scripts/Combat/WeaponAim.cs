@@ -77,7 +77,7 @@ namespace Game.Combat
         private float berserkMultiplier;
 
         #region Other Properties
-
+        private bool subscribeComplete = false;
         private float timer;
         Vector3 aimVec;
         Quaternion aimQuat;
@@ -188,7 +188,18 @@ namespace Game.Combat
         private void OnEnable()
         {
             SetProperties();
-            SubscribeListeners();
+        }
+
+        public void SubscribeToAI(AI ai)
+        {
+            if (!subscribeComplete)
+            {
+                subscribeComplete = true;
+
+                _AI = ai;
+
+                SubscribeListeners();
+            }
         }
 
         private void SubscribeListeners()

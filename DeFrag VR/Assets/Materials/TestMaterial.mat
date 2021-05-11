@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e328147ed53c755499f330a2741d8e9a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1a41c3e209ba51c4fbb25b4d4613c183, type: 3}
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,7 +69,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FresnelPower: 2
+    - _FresnelPower: 0.3
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -83,9 +83,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 7.3772106, g: 0.28023052, b: 0, a: 1}
+    - _Color: {r: 0, g: 1.5835899, b: 7.3772116, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 0, b: 0, a: 1}
     - _MainColour: {r: 8, g: 1.2235295, b: 0, a: 1}
     - _MovementDirection: {r: 0, g: -1, b: 0, a: 1}
-    - _ScrollDirection: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _ScrollDirection: {r: 0, g: 0.1, b: 0, a: 0}

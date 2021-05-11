@@ -32,7 +32,7 @@ namespace Game.Combat
             Shoot();
         }
 
-        private void Shoot()
+        protected void Shoot()
         {
             if (muzzle != null)
             {
@@ -61,7 +61,12 @@ namespace Game.Combat
 
                             //DebugHitPoint(impactPoint);
 
-                            target = hitSecondary.transform.GetComponentInParent<Target>();
+                            Debug.Log("Collider gameobject:" + hitSecondary.collider.name);
+
+                            target = hitSecondary.collider.transform.GetComponentInParent<Target>();
+                            Debug.Log("Target gameobject:" + target.gameObject.name);
+
+
                             if (target != null)
                             {
                                 target.OnHit(weaponProfile);

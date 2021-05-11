@@ -32,6 +32,10 @@ namespace Game
         [SerializeField]
         private ActiveEnemiesSet ActiveEnemiesSet;
 
+        [SerializeField]
+        [Tooltip("Runs the wave regardless of the current stage. TESTING ONLY, do not call with a GameEvent.")]
+        private bool ignoreStage = false;
+
         /// <summary>
         /// Trigger immediate wave complete events (e.g. music changes).
         /// </summary>
@@ -64,7 +68,7 @@ namespace Game
             spawnersDone = false;
             waveDone = false;
 
-            if (StageIndex == stage && spawners.Length > 0)
+            if ((StageIndex == stage || ignoreStage) && spawners.Length > 0)
             {
                 for (int i = spawners.Length-1; i >= 0; i--)
                 {
@@ -76,6 +80,7 @@ namespace Game
             {
                 Debug.LogError("No spawners detected, preparing next stage.");
                 WaveCompleteEvent.Raise();
+                DelayedWaveCompleteEvent.Raise();
             }
         }
 

@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 7af69ac0043c88343af170e69cf625b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_Ruins.unity
     guid: a00be6e0c3b514d48af046f895ced986
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Range.unity
     guid: 9196eea05bf90014e8b441698b831cba
+  - enabled: 1
+    path: Assets/Scenes/Test Space.unity
+    guid: 919657cdd7e3e394087ab512cf707d25
   m_configObjects: {}

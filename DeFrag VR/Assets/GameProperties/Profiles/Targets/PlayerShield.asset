@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: PlayerShield
   m_EditorClassIdentifier: 
   defaultDamageReaction: {fileID: 0}
-  scenarios: []
+  scenarios:
+  - action: {fileID: 11400000, guid: 0b22bbe0065d5d84dba521b67b195432, type: 2}
+    reaction: {fileID: 11400000, guid: 46218cdcb1870e345bdda6e3758b10aa, type: 2}
+    destroyProjectile: 1

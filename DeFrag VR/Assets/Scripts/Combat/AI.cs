@@ -221,7 +221,7 @@ namespace Game
             {
                 for (int i = Weapons.Length - 1; i >= 0; i--)
                 {
-                    
+                    Weapons[i].SubscribeToAI(this);
                 }
             }
 
