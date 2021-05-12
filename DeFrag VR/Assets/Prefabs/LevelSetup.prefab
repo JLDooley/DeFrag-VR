@@ -71,6 +71,7 @@ MonoBehaviour:
   onRaiseGameEvents:
   - {fileID: 11400000, guid: 76e0ad38ecc1bae4088ba57ad99664e0, type: 2}
   - {fileID: 11400000, guid: c25ba05b1f7a8ce49865fb9eed75d822, type: 2}
+  - {fileID: 11400000, guid: b89cfaa8720620841903ab52f41ce8fd, type: 2}
   onRaiseEvents:
     m_PersistentCalls:
       m_Calls:

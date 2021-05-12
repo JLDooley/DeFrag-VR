@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7136114b734d0a044b10b18334fe6402, type: 3}
-  m_Name: PlayerHealth
+  m_Script: {fileID: 11500000, guid: 7ab4b4100c2ebf0429b438d2345a0f5a, type: 3}
+  m_Name: PlayerHealthReset
   m_EditorClassIdentifier: 
-  Description: 
-  Value: 30
+  Description: Reset the player's health at the beginning of a level.
