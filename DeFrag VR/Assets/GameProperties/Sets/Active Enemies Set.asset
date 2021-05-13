@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: 'Stores all active enemies in a scene.
 
-    (Works but generates type
-    mismatches)'
+    (Works but generates
+    type mismatches)'
   Items: []
