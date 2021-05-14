@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7129accf1298d784391baaa7f01a74d0, type: 3}
   m_Name: Active Enemies Set
   m_EditorClassIdentifier: 
-  Description: 'Stores all active enemies in a scene.
-
-    (Works but generates
-    type mismatches)'
+  Description: 
   Items: []

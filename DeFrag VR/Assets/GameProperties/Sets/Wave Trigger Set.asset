@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0f06c65c9cc7a468e4f40de776ac45, type: 3}
   m_Name: Wave Trigger Set
   m_EditorClassIdentifier: 
-  Description: 'Stores active wave trigger instances in the scene.
-
-    Disables
-    all triggers when one is selected.'
+  Description: 
   Items: []

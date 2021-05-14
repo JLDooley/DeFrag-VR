@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f694481ded8b522428e3e02bccc2c157, type: 3}
   m_Name: Pause Set
   m_EditorClassIdentifier: 
-  Description: "\rHolds a list of gameobjects to disable\r\nwhen pausing the game."
+  Description: 
   Items: []

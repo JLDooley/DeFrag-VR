@@ -6,11 +6,10 @@ namespace Game.Data
 {
     public abstract class RuntimeSet<T> : ScriptableObject
     {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         [Multiline]
         public string Description = "";
-    #endif
-
+#endif
         public List<T> Items = new List<T>();
 
         public void Add(T item)

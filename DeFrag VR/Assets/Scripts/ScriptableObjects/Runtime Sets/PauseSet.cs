@@ -9,6 +9,7 @@ namespace Game.Data
     [CreateAssetMenu(fileName = "New Pause Set", menuName = "Runtime Sets/Pause")]
     public class PauseSet : RuntimeSet<Suspendable>
     {
+
         public void StartPause()
         {
             for (int i = Items.Count - 1; i >= 0; i--)
