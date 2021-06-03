@@ -36,7 +36,7 @@ namespace Game.Utility
         {
             ratio = currentHealth / maxHealth;
 
-            //Debug.Log("Current Health Ratio: " + ratio);
+            Debug.Log("Current Health Ratio: " + ratio);
 
             switch (ratio)
             {

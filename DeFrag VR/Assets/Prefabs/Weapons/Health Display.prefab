@@ -538,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8053361867962709164}
   - component: {fileID: 7222412808310466875}
+  - component: {fileID: 5525248685948460845}
   - component: {fileID: 135622138702748526}
   - component: {fileID: 4584451725789813277}
   m_Layer: 11
@@ -577,6 +578,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvent: {fileID: 11400000, guid: 87cbc8e143036854b96ab25a1ef67fa1, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4584451725789813277}
+        m_MethodName: UpdateHealthDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5525248685948460845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053361867962709163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255ee5d0646b5bb46b81417b2ff019fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 523c4d6d4467c62469556aeb9adc82f4, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:

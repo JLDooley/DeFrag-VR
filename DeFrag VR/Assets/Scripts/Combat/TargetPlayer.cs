@@ -73,15 +73,20 @@ namespace Game.Combat
             if (newHealthValue <= 0f && !targetInvincible)
             {
                 targetInvincible = true;
+                _CurrentHealth.SetValue(newHealthValue);
                 Die();
                 StartCoroutine(Cooldown(2f));
             }
             else
             {
+                Debug.Log("Target invincible: " + targetInvincible);
                 if (_CurrentHealth.Value > newHealthValue && !targetInvincible)   //Player has been hurt
                 {
                     targetInvincible = true;
                     Debug.Log("Player hurt.");
+
+                    _CurrentHealth.SetValue(newHealthValue);    //Not refactored due to bug where HealthDisplay.cs wasn't updating properly
+
                     if (onDamage != null)
                     {
                         onDamage.Raise();
@@ -93,6 +98,9 @@ namespace Game.Combat
                 {
                     targetInvincible = true;
                     Debug.Log("Player healed.");
+
+                    _CurrentHealth.SetValue(newHealthValue);
+
                     if (onHeal != null)
                     {
                         onHeal.Raise();
@@ -100,7 +108,7 @@ namespace Game.Combat
                     StartCoroutine(Cooldown(1f));
                 }
 
-                _CurrentHealth.SetValue(newHealthValue);
+                //_CurrentHealth.SetValue(newHealthValue);
             }
 
 

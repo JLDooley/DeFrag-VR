@@ -18,10 +18,10 @@ TagManager:
   - Menu
   - Player_Interactables
   - Player_VFX
-  - 
-  - 
-  - 
-  - 
+  - FogVolumeShadowCaster
+  - FogVolume
+  - FogVolumeSurrogate
+  - FogVolumeUniform
   - 
   - 
   - 

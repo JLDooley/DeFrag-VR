@@ -232,7 +232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &315500335
 Light:
   m_ObjectHideFlags: 0
@@ -713,6 +713,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3795619150783551153, guid: 8ce2c5546b36c3d48af5a6b1ed4e79f2,
+        type: 3}
+      propertyPath: onRaiseGameEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3795619150783551153, guid: 8ce2c5546b36c3d48af5a6b1ed4e79f2,
+        type: 3}
+      propertyPath: onRaiseGameEvents.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b89cfaa8720620841903ab52f41ce8fd,
+        type: 2}
     - target: {fileID: 3795619150783551156, guid: 8ce2c5546b36c3d48af5a6b1ed4e79f2,
         type: 3}
       propertyPath: m_RootOrder

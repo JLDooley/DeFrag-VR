@@ -94,6 +94,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resume Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5294357380929290311, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
+        type: 3}
+      propertyPath: m_Name
+      value: Resume Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659842745960920717, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
+        type: 3}
+      propertyPath: onRaiseGameEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659842745960920717, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
+        type: 3}
+      propertyPath: onRaiseGameEvents.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fe1527c2bf5f1e4fa32985ec08f76fd,
+        type: 2}
     - target: {fileID: 8572759107868906904, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
         type: 3}
       propertyPath: onRaiseGameEvents.Array.size
@@ -105,6 +121,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8fe1527c2bf5f1e4fa32985ec08f76fd,
         type: 2}
+    - target: {fileID: 8687434700081144481, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056366645237202015, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9062177240631139268, guid: 14f5e1b8b50884d4b8c32243fc0e6986,
         type: 3}
       propertyPath: m_Name
