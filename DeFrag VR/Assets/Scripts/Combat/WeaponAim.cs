@@ -52,9 +52,13 @@ namespace Game.Combat
         [Tooltip("Wait period before spawning a projectile.")]
         private float attackTelegraphDuration;
 
+        [SerializeField] private ParticleSystem attackTelegraphEffect;
+
         [SerializeField]
         [FMODUnity.EventRef]
         private string telegraphSoundEffect;
+
+        [SerializeField] private ParticleSystem onShootEffect;
 
         [SerializeField]
         [FMODUnity.EventRef]
@@ -188,6 +192,15 @@ namespace Game.Combat
         private void OnEnable()
         {
             SetProperties();
+            
+            if (attackTelegraphEffect != null)
+            {
+                attackTelegraphEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+            if (onShootEffect != null)
+            {
+                onShootEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
         }
 
         public void SubscribeToAI(AI ai)
@@ -342,10 +355,10 @@ namespace Game.Combat
             Debug.Log("Shooting");
             //Some shot telegraphing, followed by the spawning of a projectile with stats from the weapon profile
             #region Telegraph Code
-            //if (AttackTelegraphEmitter != null)
-            //{
-            //    AttackTelegraphEmitter(this, EventArgs.Empty);
-            //}
+            if (attackTelegraphEffect != null)
+            {
+                attackTelegraphEffect.Play(true);
+            }
 
             if (telegraphSoundEffect != "")
             {
@@ -357,16 +370,21 @@ namespace Game.Combat
             yield return new WaitForSecondsRealtime(attackTelegraphDuration);
 
             #region Shoot Effect Code
-            //if (MuzzleFlashEventEmitter != null)
-            //{
-            //    MuzzleFlashEventEmitter(this, EventArgs.Empty);
-            //}
+            if (onShootEffect != null)
+            {
+                onShootEffect.Play(true);
+            }
 
             if (onShootSoundEffect != "")
             {
                 FMODUnity.RuntimeManager.PlayOneShot(onShootSoundEffect, muzzle.position);
             }
-            
+
+            if (attackTelegraphEffect != null)
+            {
+                attackTelegraphEffect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            }
+
             #endregion
 
             Debug.Log("Spawning Projectile");

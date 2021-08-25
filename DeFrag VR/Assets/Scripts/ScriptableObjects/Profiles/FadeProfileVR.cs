@@ -19,6 +19,7 @@ namespace Game.Utility
         public Color fadeOutColour = Color.black;
         public FloatReference fadeTime;
 
+        public GameObject fadeInEffect;
 
         public void FadeIn()
         {

@@ -10,6 +10,16 @@ namespace Game.Effects
         [FMODUnity.EventRef]
         private string soundEffect;
 
+        [SerializeField] private bool playOnStart = false;
+
+        private void Start()
+        {
+            if (playOnStart)
+            {
+                PlayOneShotSoundEffect();
+            }
+        }
+
         public void PlayOneShotSoundEffect()
         {
             FMODUnity.RuntimeManager.PlayOneShot(soundEffect, transform.position);

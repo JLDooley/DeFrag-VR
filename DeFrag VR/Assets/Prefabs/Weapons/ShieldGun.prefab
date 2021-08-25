@@ -16503,7 +16503,7 @@ MonoBehaviour:
   weaponProfile: {fileID: 11400000, guid: 64b061ec660900247a3d9d84fde0b851, type: 2}
   muzzle: {fileID: 1390005363722413391}
   range: 50
-  onShootEffectPrefab: {fileID: 7365019684749152945, guid: 233f1c6ec18c7204ab2c02dfb4f784f7,
+  onShootEffectPrefab: {fileID: 7365019684749152945, guid: 80f6f54b3f016d54699a5df1cc60c78a,
     type: 3}
   onShootSoundEffect: event:/SFX/Weapons/EnergyShot
   shieldRef: {fileID: 8704699910931486168}

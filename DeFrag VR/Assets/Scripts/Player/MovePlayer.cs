@@ -56,10 +56,17 @@ namespace Game.Utility
 
         private IEnumerator FadeAndMove(Vector3 position, Quaternion rotation, FadeProfileVR fadeProfile)
         {
+            GameObject fadeInEffect;
+
             fadeProfile.FadeOut();
             yield return new WaitForSeconds(fadeProfile.fadeTime + 0.1f);
             playerTransform.transform.SetPositionAndRotation(position, rotation);
             fadeProfile.FadeIn();
+
+            if (fadeProfile.fadeInEffect)
+            {
+                fadeInEffect = Instantiate(fadeProfile.fadeInEffect, position, Quaternion.identity);
+            }
         }
 
     
